@@ -1,0 +1,52 @@
+before pelvis xray
+ add: Abdomen Upright & Supine Views
+
+after Shoulder Axial View
+ add: Shoulder OIR(Grashey) View Left/Right
+ add: Shoulder Lateral(Neers) View Left/Right
+ add: Shoulder Neutral Left/Right
+ add: Shoulder IR Left/Right
+ add: Shoulder Glenohumeral Left/Right
+
+after Shoulder AP
+ add: Neutral AP Stress View Left/Right
+
+after clavicle
+ add: Clavicle AP Cephalad Angulation(Serendipity View) Left/Right
+
+after Wrist APL
+ add: Carpal Tunnel View Left/Right
+ add: Clenched Fist View Left/Right
+
+after Hand PAO
+ add: Hand Pronated Oblique View Left/Right
+ add: Hand Supinated Oblique View Left/Right
+
+before Knee Sunrise View
+ add: Knee Merchant View AP Left/Right
+
+after Knee Sunrise View
+ add: Knee Rosenburg View Left/Right
+ add: Knee Tunnel View Left/Right
+ add: Tibial Plateau View Left/Right
+
+after Ankle APL
+ add: Ankle Mortise APL
+
+after Foot APL
+ add: Foot Oblique Left/Right
+
+after Foot APO
+ add: Talar Neck View Left/Right
+ add: Talar Tilt Stress Viwe Left/Right
+ add: Harris View Left/Right
+ add: Broden's View
+
+after Lumbar APL
+ add: Lumbar Ferguson View
+ add: Lumbar Oblique Views Left/Right
+
+after Pelvis AP
+ add: Pelvis Inlet+Outlet Views
+ add: Pelvis Internal Oblique+External Oblique Views
+

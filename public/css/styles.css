@@ -1,0 +1,90 @@
+/*import Font*/
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+
+html, body{
+	min-height: 100%;
+	margin: 0;
+	font-family: 'Play', sans-serif;
+}
+
+.wrapper{
+	min-height: 100vh;
+}
+
+/*Navigation*/
+nav.navbar.navbar-default{
+	margin: 0;
+}
+.navbar-right{
+	padding-top: 15px;
+}
+img.navbar-brand{
+	margin: 0;
+	padding: 0;
+	min-height: 5em;
+	width: 300px;
+}
+/*Responsive bars*/
+.navbar-toggle{
+	padding-top: 25px;
+}
+/*End navigation*/
+
+/*footer*/
+.footer{
+	color: #FFFFFF;
+	position: absolute;
+	width: 100%;
+	padding: 20px;
+	margin: 0;
+}
+/*end of footer*/
+
+/*index-login*/
+#index-header{
+	background-image: url("../img/ortho.jpg");
+	background-position: top center;
+	background-size: cover; 
+}
+#container-header-index{
+	padding: 20px;
+	padding-top: 10em;
+}
+/*end of Index-login*/
+
+/*Register*/
+#register-header{
+	background-image: url("../img/ortho.jpg");
+	background-position: top center;
+	background-size: cover; 
+}
+#container-header-register{
+	padding: 20px;
+	padding-top: 5em;
+}
+/*end of Register*/
+
+/*All Main*/
+.main{
+	background: #EBEBEB;
+	min-height: 100vh;
+}
+#container-home{
+	padding-top: 30px;
+}
+
+button.mdl-button.mdl-button--raised.mdl-button--colored {
+	background: white;
+	color: grey;
+}
+
+/*End of All main*/
+
+/*Data Table Responsive*/
+div.mdl-cell.mdl-cell--6-col{
+	display: inline;
+	text-align: left;
+}
+/*End Datatable*/
+

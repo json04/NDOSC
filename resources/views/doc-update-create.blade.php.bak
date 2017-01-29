@@ -1,0 +1,278 @@
+@extends('layouts.app')
+@include('flash::message')
+
+
+@section('content')
+<div class="page-header" id="home-header">
+    <div class="container">
+        <div class="header" align="center">
+            <h1 class="title">Patient Consultation Update</h1>
+            <h3 class="description">Please fill the required information below. Check all the inputs before submitting.</h3>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="table-responsive">
+        <div class="container">
+           <div class="row">
+               <div class="col-md-9 col-md-offset-2 col-sm-9 col-sm-offset-2">
+                   <table class="table table-stripped ">
+                <h3>Patient's Information</h3>
+                <thead>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Civil Status</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ $retrieves->lastname }}</td>
+                        <td>{{ $retrieves->firstname }}</td>
+                        <td>{{ $retrieves->middlename }}</td>
+                        <td>{{ $retrieves->age }}</td>
+                        <td>{{ $retrieves->sex }}</td>
+                        <td>{{ $retrieves->civilstatus }}</td>
+                    </tr>
+                </tbody> 
+            </table>
+            <table class="table">
+                <h3>Additional Information</h3>
+                <thead>
+                    <th>Address</th>
+                    <th>Contact</th>
+                    <th>Occupation</th>
+                    <th>Consultaion Date</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ $retrieves->address }}</td>
+                        <td>{{ $retrieves->contact }}</td>
+                        <td>{{ $retrieves->occupation }}</td>
+                        <th>{{ $dates->date }}</th>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <h3 style="color:red">Consulation</h3>
+                <thead>
+                    <th>Subjective</th>
+                    <th>Objective</th>
+                    <th>Assessment</th>
+                    <th>Plan</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ $subjectives->subjective }}</td>
+                        <td>{{ $objectives->objective }}</td>
+                        <td>{{ $assessments->assessment }}</td>
+                        <td>{{ $plans->plan }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <h3 style="color:red">IMAGES</h3>
+                <thead>
+                    <th>Radiographs</th>
+                    <th>Physical Examination</th>
+                </thead>
+                <tbody>
+                    <div class="card-image">
+                        <tr>
+                            @if($objectives->radiograph)
+                                <td><img class="img img-raised" src="/uploads/{{ $objectives->images }}" alt="" width="400" height="300"></td>
+                            @else
+                                <td>No Image</td>
+                            @endif
+                            @if($objectives->physical_image)
+                                <td><img class="img img-raised" src="/uploads/{{ $objectives->physical_image }}" alt="" width="400" height="300"></td>
+                            @else
+                                <td>No Image</td>
+                            @endif
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+               </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<section class="section-dark">
+   <br>
+    <div class="container">
+        <div class="row">
+           <form action="/proceed/{{ $retrieves->id }}" method="post" enctype="multipart/form-data" id="form-id">
+           {{ csrf_field() }}
+           <div class="form-group" hidden>
+              <label for="inputModel" class="col-lg-2 control-label">Patients ID</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" name="patients_id" value="{{ $retrieves->id }}">
+              </div>
+            </div>
+
+            <div class="form-group" hidden>
+              <label for="inputModel" class="col-lg-2 control-label">Patients ID</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" name="subjectives_id" value="{{ $retrieves->id }}">
+              </div>
+            </div>
+
+            <div class="form-group" hidden>
+              <label for="inputModel" class="col-lg-2 control-label">Patients ID</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" name="objectives_id" value="{{ $retrieves->id }}">
+              </div>
+            </div>
+
+            <div class="form-group" hidden>
+              <label for="inputModel" class="col-lg-2 control-label">Patients ID</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" name="assessments_id" value="{{ $retrieves->id }}">
+              </div>
+            </div>
+
+            <div class="form-group" hidden>
+              <label for="inputModel" class="col-lg-2 control-label">Patients ID</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" name="plans_id" value="{{ $retrieves->id }}">
+              </div>
+            </div>
+
+            <div class="form-group" hidden>
+              <label for="inputModel" class="col-lg-2 control-label">Patients ID</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" name="dates_id" value="{{ $retrieves->id }}">
+              </div>
+            </div>
+       
+            <div class="col-md-12 col-sm-12 col-md-offset-0">
+                <div class="card card-signup" id="screate-card">
+                    <h3 class="card-title text-center">Patient's Information</h3>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="description text-center">
+                                <h4 class="card-title">Informaton</h4>
+                                <p class="card-title">Please fill the <strong style="color:red;">required inputs</strong> below before clicking submit button.</p>
+                            </div>
+                        </div>
+                            <div class="content">
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">face</i>
+                                        </span>
+                                        <textarea type="text" class="form-control" required placeholder="Subjective Complain" name="subjective" rows="5"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">face</i>
+                                        </span>
+                                        <textarea type="text" class="form-control" required placeholder="Objective/Findings" name="objective" rows="5"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">face</i>
+                                        </span>
+                                        <textarea type="text" class="form-control" required placeholder="Assessment" name="assessment" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">person_outline</i>
+                                        </span>
+                                        <textarea type="text" class="form-control" required placeholder="PLAN" name="plan" rows="5"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">date_range</i>
+                                        </span>
+                                        <input type="text" class="datepicker form-control" name="date" placeholder="Consulation Date">
+                                    </div>
+                                </div>
+
+                            </div> 
+                    </div>
+                </div>
+            </div>
+            
+            <!--   IMAGE UPLOAD     -->
+            <div class="col-md-12 col-sm-12 col-md-offset-0">
+                <div class="card card-signup">
+                    <h3 class="card-title text-center">Patient's Physical Examination and Radiograph</h3>
+                    <div class="row">
+                        <div class="content">
+                           <div class="col-md-12">
+                            <div class="description text-center">
+                                <h4 class="card-title">Informaton</h4>
+                                <p class="card-title">Do not upload image if not <strong style="color:red;">required</strong>.</p>
+                            </div>
+                        </div>
+                            <div class="col-md-6 col-sm-6" align="center">
+                                <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                  <div class="fileinput-new thumbnail img-raised" style="max-width: 400px; max-height: 250px;">
+                                    <img src="{{ asset('/css/img/image_placeholder.jpg') }}" alt="...">
+                                  </div>
+                                  <div class="fileinput-preview fileinput-exists thumbnail img-raised" style="max-width: 400px; max-height: 250px;"></div>
+                                  <div>
+                                    <span class="btn btn-round btn-default btn-file"><span class="fileinput-new">Select RADIOGRAPH Image</span><span class="fileinput-exists">Change</span><input type="file" name="radiograph"></span>
+                                    <a href="#" class="btn btn-danger btn-simple fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content">
+                            <div class="col-md-6 col-sm-6" align="center">
+                                <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                  <div class="fileinput-new thumbnail img-raised" style="max-width: 400px; max-height: 250px;">
+                                    <img src="{{ asset('/css/img/image_placeholder.jpg') }}" alt="...">
+                                  </div>
+                                  <div class="fileinput-preview fileinput-exists thumbnail img-raised" style="max-width: 400px; max-height: 250px;"></div>
+                                  <div>
+                                    <span class="btn btn-round btn-default btn-file"><span class="fileinput-new">Select PHYSICAL EXAMINATION Image</span><span class="fileinput-exists">Change</span><input type="file" name="physical_image"></span>
+                                    <a href="#" class="btn btn-danger btn-simple fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                         <div class="col-md-12">
+                            <div class="footer text-center">
+                                <p class="card-description">Please review the <strong>inputted data</strong> before clicking submit button</p>
+                                <button type="submit" class="btn btn-danger btn-round" id="submit-id">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            </form>
+            </div>
+        </div>
+</section>
+@endsection
+
+
+@section('script')
+<script type="text/javascript">
+$(function(){
+     $("#submit-id").click(function () {
+       $("#submit-id").attr("disabled", true);
+       $('#form-id').submit();
+     });
+   });
+</script>
+@endsection

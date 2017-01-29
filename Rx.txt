@@ -1,0 +1,256 @@
+Pain/Muscle Relaxant Medications
+Arcoxia 120mg tablet # 7
+	Sig. 1 tablet once a day after meal
+Arcoxia 90mg tablet #10
+	Sig. 1 tablet once a day after meal
+Arcoxia 60mg tablet # 20
+	Sig 1 tablet 2x a day after meal
+Celebrex 400 mg capsule # 14
+	Sig. 1 tablet once a day after meal
+Celcoxx 400 mg capsule # 14
+	Sig. 1 tablet once a day after meal
+Celebrex 200 mg capsule # 14
+	Sig. 1 tablet 2x a day after meal
+Celcoxx 200 mg capsule # 14
+	Sig. 1 tablet 2x a day after meal
+Oxycodone 10mg tab # 15 
+	Sig. 1 tablet once a day at night time
+Dolcet tab # 21
+	Sig. 1 tab 3x a day
+Dolcet mini  tab # 21
+	Sig. 1 tab 3x a day
+Paratram tab # 21
+	Sig. 1 tablet 3 x a day
+Mefenamic Acid 250 mg cap # 21
+	Sig. 1 cap 3x a day
+? Mefenamic Acid 50mg/5ml bot # 2
+	Sig. 2 tsp every 6 hrs as needed
+Mefenamic Acid 50mg/5ml bot # 2
+	Sig. 1 tsp every 6 hrs as needed
+Paracetamol(Biogesic) 500mg tab # 12
+	Sig. 1 tab every 4 hrs as needed
+Paracetamol(Tempra) 250mg/5ml 60ml bot# 2
+	Sig. 1 tbsp every 4 hrs as needed.
+Paracetamol(Tempra) 125mg/5ml 60ml bot# 2
+	Sig. 1 tsp every 4 hrs as needed.
+Lyrica 75mg cap # 21
+	Sig.  1 cap 2x a day
+Lyrica 50mg cap # 21
+	Sig.  1 cap 2x a day
+Gabix 300mg cap # 21
+	Sig. 1 cap 3x a day
+Gabix 100mg cap # 21
+	Sig. 1 capsule 3x a day
+Norgesic Forte tab # 21
+	Sig. I tab 3x a day
+Myonal tab # 21
+	Sig. 1 tab 3x a day
+Baclofen 10mg tab # 21
+	Sig. 1 tablet 3x a day
+Dexamethasone(Decilone Forte) 4mg tab # 4
+	Sig. 1 tablet once a day after meal
+Prednisolone(Pred 10) 10mg tab # 4 
+	Sig. 1 tablet once a day
+
+Antimicrobial Medications
+Zegen 500mg tab # 14
+	Sig. 1 tab 2x a day
+Unasyn 625mg tab # 14
+	Sig. 1 tab 2x a day
+Co-Amoxiclav 625mg tab # 14
+	Sig. 1 tablet 2x a day
+Cloxicillin 500mg cap # 28
+	Sig. 1 capsule 4 x a day
+Cloxicillin 500mg cap # 56
+	Sig. 1 capsule x a day for 14 days
+Cloxacillin 250mg/5ml bot # 4 
+	Sig. 1 tsp 3 x a day for 14 days
+Cloxacillin 125mg/5ml bot # 4 
+	Sig. 1 tsp 3 x a day for 14 days
+Cefuroxime(Zegen) 250mg cap # 14
+	Sig. 1 capsule 2x a day
+Cefuroxime(Zegen) 500mg cap # 14
+	Sig. 1 capsule 2x a day
+Cefuroxime 250mg/5ml 50ml bot # 2
+	Sig. 1 tsp 2 x a day
+Cefuroxime 125mg/5ml 50ml bot # 2
+	Sig. 1 tsp 2 x a day
+Levofloxacin 750mg tab # 7
+	Sig. 1 tablet once a day
+Levofloxacin 750mg tab # 7
+	Sig. 1 tablet once a day for 14 days
+Fluconazole 150mg tab # 14
+	Sig. 1 tablet 1 x a day for 2 weeks
+Levox 500mg tab # 7
+	Sig. 1 tab once  a day
+Ciprobay 1000mg tab # 7
+	Sig. 1 tab 1x a day
+Myrin-P Forte tab # 120
+	Sig. 4 tablets in a.m 1hr before food intake
+Myrin-P Forte tab # 90
+	Sig. 3 tabs OD in 1hr a.m before meal
+Myrin tab # 120 
+	Sig. 4 tablets in a.m 1 hr before food intake
+Myrin tab # 90
+	Sig. 3 tablets in a.m 1 hr before food intake
+Rifampicin 300mg tab # 14
+	Sig. 1 tablet once a day 
+Rifampicin 200mg/5ml 120ml bot # 2
+	Sig. 1 tbsp once a day in a.m before food intake
+Rifampicin 200mg/5ml 120ml bot # 2
+	Sig. 1 tsp once a day in a.m before food intake
+
+Misc Supplements
+Mecobalamine 500mcg tab # 30
+	Sig. 1 tab 3x a day
+Diprospan amp # 1
+	Sig. AD
+Fosavance 6500IU tab # 8
+	Sig. 1 tab 1x a week in a.m before any intake
+Reventa tab # 8
+	Sig. 1 tab 1x a week in a.m before any intake
+Bonviva 150mg tab # 4
+	Sig. 1 tab 1x a month in a.m before any intake.
+Polynerve 1000 tab # 60
+	sig. 1 tablet 2x a day
+Meganerve 1000 tab # 60
+	sig. 1 tablet 2x a day
+Mecobalamine(Methycobal) 500mcg amp# 6
+	sig. 1 amp via IM injection every 2 days
+Mecobalamine(Methycobal) 500mcg tab # 90
+	sig. 1 tablet 3x a day
+ImmunPro tab # 30
+	sig. 1 tablet once a day after meal
+Caltrate tab #60
+	Sig. I tab 2x a day
+Calciumade tab #60
+	Sig 1 tab 2x a day
+Appebon tab# 30
+	Sig. 1 tablet 1x a day
+Appetite Plus tab # 30
+	sig. 1 tablet 1 a day
+Appetens tab # 30
+	sig. 1 tablet 1 x a day
+Appebon Kid 120ml Syrup bot # 2 
+	Sig. 1 tsp 1x a day
+
+
+Injectables
+Diprospan 1ml amp # 1
+	Sig. AD
+Diprospan 1ml amp # 2
+	Sig. AD
+Teriparatide(Forteo) multi dose prefilled pen set # 1
+Zolendronic Acid(Osteomet) 4mg via l # 1
+	Sig. 1 vial+ 20ml PNSS to be given in 20 min
+Hyruan Plus 2.5ml pre-filled syringe # 3
+	Sig. AD
+High Hyal Plus 2ml pre-filled syringe # 3
+	ig. AD
+D50 Glucose Injection bot # 1
+Lidocaine 2% amp # 1
+Lidocaine 2 % amp # 2
+1 cc syringe # 1
+5 cc syringe # 1
+10 cc syringe # 1
+
+Wound Dressing/Care Products
+1 cc syringe # 1
+5 cc syringe # 1
+10 cc syringe # 1
+Sterile gauze pads # 10
+Sterile gauze pads # 20
+Sterile gauze pads # 30
+Working gloves box # 1
+1 inch Hypoallergenic plaster # 1
+Velcro Elastic Bondage 4 inches # 2
+Velcro Elastic Bondage 6 inches # 2
+Hydrogen Peroxide 50 ml bot # 1
+10% Betadine Soln 10 ml bot # 1
+PNSS 1L bot # 1
+Cutasep F 50ml bot #1
+Cutasep F 250ml bot # 1
+Prontosan Wound Irrigation Soln bot # 1
+Intrasite gel #1
+Iodosorb powder # 1
+Iodosorb gel # 1
+Mebo gel # 1
+Acticoat dressing # 3
+Allevyn dressing # 3
+Bactigrass # 2
+Mupirocin(Bactroban) ointment # 2
+Silver Sulfadiazine(Flammazine) cream # 2
+Opsite post-op dressing 6cm # 2
+Opsite post-op dressing 10cm # 2
+Opsite post-op dressing 15cm # 2
+Opsite post-op dressing 20cm # 2
+Opsite post-op dressing 25cm # 2
+Opsite post-op dressing 30cm # 2
+Aquacel Ag dressing # 2
+Kaltostat dressing # 2
+Casting Materials
+3 inch Long Bone fiber cast # 1
+3 inch Long Bone fiber cast # 2
+4 inch Long Bone fiber cast # 1
+4 inch Long Bone fiber cast # 2
+5 inch Long Bone fiber cast # 1
+5 inch Long Bone fiber cast # 2
+4 inch Long Bone fiber splint # 1
+5 inch Long Bone fiber splint # 1
+3 inch PrimeCast fiber cast # 1
+3 inch PrimeCast fiber cast # 2
+4 inch PrimeCast fiber cast # 1
+4 inch PrimeCast fiber cast # 2
+5 inch PrimeCast fiber cast # 1
+5 inch PrimeCast fiber cast # 2
+4 inch PrimeCast fiber splint # 1
+5 inch PrimeCast fiber splint # 1
+Stockinet 2 inches 1 yard # 1
+Stockinet 3 inches 1 yard # 1
+Stockinet 4 inches 1 yard # 1
+Stockinet 5 inches 1 yard # 1
+Velcro elastic bondage 2 inches # 1
+Velcro elastic bondage 2 inches # 2
+Velcro elastic bondage 3 inches # 1
+Velcro elastic bondage 3 inches # 2
+Velcro elastic bondage 4 inches # 1
+Velcro elastic bondage 4 inches # 2
+Velcro elastic bondage 5 inches # 1
+Velcro elastic bondage 5 inches # 2
+PrimeCast Wadding sheet 4 inches # 1
+PrimeCast Wadding sheet 4 inches # 2
+PrimeCast Wadding sheet 6 inches # 1
+PrimeCast Wadding sheet 6 inches # 2
+Long bone Armsling kiddie size # 1
+Long bone Armsling small size # 1
+Long bone Armsling medium size # 1
+Long bone Armsling Large size # 1
+Long bone Armsling X-L size # 1
+Orthopedics/Prostheses
+Soft collar small # 1
+Hard Collar small # 1
+Soft collar medium # 1
+Hard Collar medium # 1
+Soft collar large # 1
+Hard Collar large # 1
+Four Foster Brace
+Halo vest
+Jewett Brace
+Knight-Taylor Brace
+Chairback/Low-Taylor Brace
+Milwaukee Brace
+Shoulder Compression Sleeve
+Humeral Fracture Brace
+Elbow Compression sleeve
+Static wrist splint
+Wrist compression sleeve
+Ischial Weight Bearing Brace
+Knee Compression sleeve
+Knee Hinge Brace
+Knee Immobilizer
+Patellar Tendon Strap
+Ankle Compression sleeve
+Walker boots
+Compression Foot Sleeve
+Silicone insole medial arch support
+Backjoy sitsmart posture plus(Travel Club)

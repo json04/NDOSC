@@ -1,0 +1,5 @@
+routing for prescriptions by group
+auto add input from SOAP
+image date bug
+medical certificate 
+selected plan for medical certificate 
