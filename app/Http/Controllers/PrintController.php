@@ -440,7 +440,7 @@ class PrintController extends Controller
         $result = array($arcoxia120, $arcoxia90, $arcoxia60, $celebrex400, $celebrex200, $celcoxx400, $celcoxx200, $oxycodone10, $dolcet, $dolcetmini, $paratram, $mefenamic_acid250, $mefenamic_acid50, $mefenamic_acid50_2, $paracetamol_biogesic500, $paracetamol_tempra250, $paracetamol_tempra125, $lyrica75, $lyrica50, $gabix300, $gabix100, $norgesic_forte, $myonal, $baclofen10, $dexamethasone_decilone_Forte4, $prednisolone10, );
 
         $relaxants = array_filter($result, function($data){
-            return $data != null;
+            return $data['array'] == '2';
         });
         
         dd($relaxants);
