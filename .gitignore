@@ -1,7 +1,1 @@
-public/uploads
-/vendor
-/node_modules
-Homestead.yaml
-Homestead.json
-.env
-.DS_Store
+public/uploads/
