@@ -66,7 +66,7 @@ class DoctorController extends Controller
                 $rules = array('file' => 'required'); //'required|mimes:png,gif,jpeg,txt,pdf,doc'
                 $validator = Validator::make(array('file'=> $file), $rules);
                 if($validator->passes()){
-                $destinationPath = public_path('/uploads/');
+                $destinationPath = public_path('uploads/');
                 $filename = $retrieves->lastname.'-'.$retrieves->firstname.'-'.rand(10,100).$file->getClientOriginalName();
                 $upload_success = $file->move($destinationPath, $filename);
                 $img->image=$filename;
