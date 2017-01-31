@@ -138,7 +138,7 @@ class DoctorController extends Controller
         $plans = Plan::findOrFail($id);
         // $images = Photo::findOrFail($id);
         $images=DB::table('photos')->where('date','=',$dates->date)->get();
-        dd($images);
+        // dd($images);
         return view('doc-update-create', compact('retrieves', 'dates', 'subjectives', 'objectives', 'assessments', 'plans', 'images'));
     }
 
