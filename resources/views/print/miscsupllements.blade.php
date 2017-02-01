@@ -53,13 +53,13 @@ div.cls_010{font-family:"Calibri",serif;font-size:14.1px;color:rgb(0,0,0);font-w
 <div style="position:absolute;left:108.01px;top:242.29px" class="cls_006"><span class="cls_006"><strong>Age:</strong> <u>{{$dates->patients->age}}</u></span></div>
 <div style="position:absolute;left:36.00px;top:255.49px" class="cls_006"><span class="cls_006"><strong>Address:</strong> {{$dates->patients->address}}</span></div>
 <div style="position:absolute;left:72.00px;top:360.85px" class="cls_006"><span class="cls_006">
-	<div class="container" style="width: 330px;">
+	<div class="container" style="width: 330px; height: 245px;">
 		<table>
 			<tbody>
-				@foreach($relaxants as $info)
+				@foreach($miscs as $info)
 					@foreach($info as $data)
-						<tr style="padding-top: -40px;">
-							<td><i>{{$data}}</i></td>
+						<tr>
+							<td>{{$data}}</td>
 						</tr>
 					@endforeach
 				@endforeach

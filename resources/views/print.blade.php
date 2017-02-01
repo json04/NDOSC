@@ -1300,79 +1300,79 @@
 						<div class="col-md-6 col-sm-6">
 							<div class="checkbox">
 								<label style="color: black;"> 
-									<input type="checkbox" name="arcoxia120" value="Arcoxia 120mg tablet # 7|Sig. 1 tablet once a day after meal">
+									<input type="checkbox" name="arcoxia120" value="Arcoxia 120mg tablet # 7|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet once a day after meal">
 									Arcoxia 120mg tablet # 7 <br>
 									&emsp;&emsp;Sig. 1 tablet once a day after meal
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="arcoxia90" value="Arcoxia 90mg tablet #10|Sig. 1 tablet once a day after meal">
+									<input type="checkbox" name="arcoxia90" value="Arcoxia 90mg tablet #10|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet once a day after meal">
 									Arcoxia 90mg tablet #10<br>
 									&emsp;&emsp;Sig. 1 tablet once a day after meal
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="arcoxia60" value="Arcoxia 60mg tablet # 20|Sig. 1 tablet 2x a day after meal">
+									<input type="checkbox" name="arcoxia60" value="Arcoxia 60mg tablet # 20|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet 2x a day after meal">
 									Arcoxia 60mg tablet # 20<br>
 									&emsp;&emsp;Sig. 1 tablet 2x a day after meal
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="celebrex400" value="Celebrex 400 mg capsule # 14|Sig. 1 tablet once a day after meal">
+									<input type="checkbox" name="celebrex400" value="Celebrex 400 mg capsule # 14|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet once a day after meal">
 									Celebrex 400 mg capsule # 14<br>
 									&emsp;&emsp;Sig. 1 tablet once a day after meal
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="celebrex200" value="Celebrex 200 mg capsule # 14|Sig. 1 tablet 2x a day after meal">
+									<input type="checkbox" name="celebrex200" value="Celebrex 200 mg capsule # 14|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet 2x a day after meal">
 									Celebrex 200 mg capsule # 14<br>
 									&emsp;&emsp;Sig. 1 tablet 2x a day after meal
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="celcoxx400" value="Celcoxx 400 mg capsule # 14|Sig. 1 tablet once a day after meal">
+									<input type="checkbox" name="celcoxx400" value="Celcoxx 400 mg capsule # 14|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet once a day after meal">
 									Celcoxx 400 mg capsule # 14<br>
 									&emsp;&emsp;Sig. 1 tablet once a day after meal
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="celcoxx200" value="Celcoxx 200 mg capsule # 14|Sig. 1 tablet 2x a day after meal">
+									<input type="checkbox" name="celcoxx200" value="Celcoxx 200 mg capsule # 14|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet 2x a day after meal">
 									Celcoxx 200 mg capsule # 14<br>
 									&emsp;&emsp;Sig. 1 tablet 2x a day after meal
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="oxycodone10" value="Oxycodone 10mg tab # 15|Sig. 1 tablet once a day at night time">
+									<input type="checkbox" name="oxycodone10" value="Oxycodone 10mg tab # 15|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet once a day at night time">
 									Oxycodone 10mg tab # 15<br>
 									&emsp;&emsp;Sig. 1 tablet once a day at night time
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="dolcet" value="Dolcet tab # 21|Sig. 1 tab 3x a day">
+									<input type="checkbox" name="dolcet" value="Dolcet tab # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tab 3x a day">
 									Dolcet tab # 21<br>
 									&emsp;&emsp;Sig. 1 tab 3x a day
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="dolcetmini" value="Dolcet mini  tab # 21|Sig. 1 tab 3x a day">
+									<input type="checkbox" name="dolcetmini" value="Dolcet mini  tab # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tab 3x a day">
 									Dolcet mini  tab # 21<br>
 									&emsp;&emsp;Sig. 1 tab 3x a day
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="paratram" value="Paratram tab # 21|Sig. 1 tablet 3 x a day">
+									<input type="checkbox" name="paratram" value="Paratram tab # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet 3 x a day">
 									Paratram tab # 21<br>
 									&emsp;&emsp;Sig. 1 tablet 3 x a day
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="mefenamic_acid250" value="Mefenamic Acid 250 mg cap # 21|Sig. 1 cap 3x a day">
+									<input type="checkbox" name="mefenamic_acid250" value="Mefenamic Acid 250 mg cap # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 cap 3x a day">
 									Mefenamic Acid 250 mg cap # 21<br>
 									&emsp;&emsp;Sig. 1 cap 3x a day
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="mefenamic_acid50" value="Mefenamic Acid 50mg/5ml bot # 2|Sig. 2 tsp every 6 hrs as needed">
+									<input type="checkbox" name="mefenamic_acid50" value="Mefenamic Acid 50mg/5ml bot # 2|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 2 tsp every 6 hrs as needed">
 									Mefenamic Acid 50mg/5ml bot # 2<br>
 									&emsp;&emsp;Sig. 2 tsp every 6 hrs as needed
 								</label><br>
@@ -1383,78 +1383,78 @@
 							<div class="checkbox">
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="mefenamic_acid50_2" value="Mefenamic Acid 50mg/5ml bot # 2|Sig. 1 tbsp every 6 hrs as needed">
+								<input type="checkbox" name="mefenamic_acid50_2" value="Mefenamic Acid 50mg/5ml bot # 2|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tbsp every 6 hrs as needed">
 								Mefenamic Acid 50mg/5ml bot # 2<br>
 								&emsp;&emsp;Sig. 1 tbsp every 6 hrs as needed
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="paracetamol_biogesic500" value="Paracetamol(Biogesic) 500mg tab # 12|Sig. 1 tab every 4 hrs as needed">
+								<input type="checkbox" name="paracetamol_biogesic500" value="Paracetamol(Biogesic) 500mg tab # 12|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tab every 4 hrs as needed">
 								Paracetamol(Biogesic) 500mg tab # 12<br>
 								&emsp;&emsp;Sig. 1 tab every 4 hrs as needed
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="paracetamol_tempra250" value="Paracetamol(Tempra) 250mg/5ml 60ml bot# 2|Sig. 1 tbsp every 4 hrs as needed.">
+								<input type="checkbox" name="paracetamol_tempra250" value="Paracetamol(Tempra) 250mg/5ml 60ml bot# 2|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tbsp every 4 hrs as needed.">
 								Paracetamol(Tempra) 250mg/5ml 60ml bot# 2<br>
 								&emsp;&emsp;Sig. 1 tbsp every 4 hrs as needed.
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="paracetamol_tempra125" value="Paracetamol(Tempra) 125mg/5ml 60ml bot# 2|Sig. 1 tsp every 4 hrs as needed.">
+								<input type="checkbox" name="paracetamol_tempra125" value="Paracetamol(Tempra) 125mg/5ml 60ml bot# 2|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tsp every 4 hrs as needed.">
 								Paracetamol(Tempra) 125mg/5ml 60ml bot# 2<br>
 								&emsp;&emsp;Sig. 1 tsp every 4 hrs as needed.
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="lyrica75" value="Lyrica 75mg cap # 21|Sig.  1 cap 2x a day">
+								<input type="checkbox" name="lyrica75" value="Lyrica 75mg cap # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig.  1 cap 2x a day">
 								Lyrica 75mg cap # 21<br>
 								&emsp;&emsp;Sig.  1 cap 2x a day
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="lyrica50" value="Lyrica 50mg cap # 21|Sig.  1 cap 2x a day">
+								<input type="checkbox" name="lyrica50" value="Lyrica 50mg cap # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig.  1 cap 2x a day">
 								Lyrica 50mg cap # 21<br>
 								&emsp;&emsp;Sig.  1 cap 2x a day
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="gabix300" value="Gabix 300mg cap # 21|Sig. 1 cap 3x a day">
+								<input type="checkbox" name="gabix300" value="Gabix 300mg cap # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 cap 3x a day">
 								Gabix 300mg cap # 21<br>
 								&emsp;&emsp;Sig. 1 cap 3x a day
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="gabix100" value="Gabix 100mg cap # 21|Sig. 1 capsule 3x a day">
+								<input type="checkbox" name="gabix100" value="Gabix 100mg cap # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 capsule 3x a day">
 								Gabix 100mg cap # 21<br>
 								&emsp;&emsp;Sig. 1 capsule 3x a day
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="norgesic_forte" value="Norgesic Forte tab # 21|Sig. I tab 3x a day">
+								<input type="checkbox" name="norgesic_forte" value="Norgesic Forte tab # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig. I tab 3x a day">
 								Norgesic Forte tab # 21<br>
 								&emsp;&emsp;Sig. I tab 3x a day
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="myonal" value="Myonal tab # 21|Sig. 1 tab 3x a day">
+								<input type="checkbox" name="myonal" value="Myonal tab # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tab 3x a day">
 								Myonal tab # 21<br>
 								&emsp;&emsp;Sig. 1 tab 3x a day
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="baclofen10" value="Baclofen 10mg tab # 21|Sig. 1 tablet 3x a day">
+								<input type="checkbox" name="baclofen10" value="Baclofen 10mg tab # 21|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet 3x a day">
 								Baclofen 10mg tab # 21<br>
 								&emsp;&emsp;Sig. 1 tablet 3x a day
 							</label><br>
 
 							<label style="color: black;"> 
-								<input type="checkbox" name="dexamethasone_decilone_Forte4" value="Dexamethasone(Decilone Forte) 4mg tab # 4|Sig. 1 tablet once a day after meal">
+								<input type="checkbox" name="dexamethasone_decilone_Forte4" value="Dexamethasone(Decilone Forte) 4mg tab # 4|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet once a day after meal">
 								Dexamethasone(Decilone Forte) 4mg tab # 4<br>
 								&emsp;&emsp;Sig. 1 tablet once a day after meal
 							</label><br>
 							<label style="color: black;"> 
-								<input type="checkbox" name="prednisolone10" value="Prednisolone(Pred 10) 10mg tab # 4|Sig. 1 tablet once a day">
+								<input type="checkbox" name="prednisolone10" value="Prednisolone(Pred 10) 10mg tab # 4|&nbsp;&nbsp;&nbsp;&nbsp;Sig. 1 tablet once a day">
 								Prednisolone(Pred 10) 10mg tab # 4 <br>
 								&emsp;&emsp;Sig. 1 tablet once a day
 							</label><br>

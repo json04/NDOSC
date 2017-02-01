@@ -445,7 +445,7 @@ class PrintController extends Controller
         $relaxants = array_filter($array, function($x){ return!empty($x);});
 
          $pdf = PDF::loadView('print.relaxant', compact('relaxants', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Relaxant_Prescription.pdf'); 
+        return $pdf->stream('Relaxant_relaxant_request.pdf'); 
     }
 
     public function miscsupplement(Request $request, $id){
@@ -505,11 +505,15 @@ class PrintController extends Controller
         $result_appebon_kid120 = $request->input('appebon_kid120');
         $appebon_kid120 = explode('|', $result_appebon_kid120);
 
-        $miscs = $arrayName = array($mecobalamine500, $deiprospan, $fosavance6500, $reventa, $bonviva150, $polynerve1000, $meganerve1000, $mecobalamine_methycobal500_6, $mecobalamine_methycobal500_90, $immunpro, $caltrate, $calciumade, $appebon, $appetite_plus, $appetens, $appebon_kid120, );
+        $result = $arrayName = array($mecobalamine500, $deiprospan, $fosavance6500, $reventa, $bonviva150, $polynerve1000, $meganerve1000, $mecobalamine_methycobal500_6, $mecobalamine_methycobal500_90, $immunpro, $caltrate, $calciumade, $appebon, $appetite_plus, $appetens, $appebon_kid120, );
         // end of Misc Supplements
 
-        $pdf = PDF::loadView('print.prescription', compact('miscs', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Prescription-Request.pdf');
+        array_filter($result, function($v){return!empty($v);});
+        $array = array_map('array_filter', $result);
+        $miscs = array_filter($array, function($x){ return!empty($x);});
+
+        $pdf = PDF::loadView('print.miscsupplement', compact('miscs', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        return $pdf->stream('Prescription_miscsupplements_request.pdf');
 
     }
 
@@ -592,11 +596,15 @@ class PrintController extends Controller
         $result_refampicin200_tsp = $request->input('refampicin200_tsp');
         $refampicin200_tsp = explode('|', $result_refampicin200_tsp);
 
-        $antimicrobials = $arrayName = array($zegen500, $unasyn625, $co-amoxiclav625, $cloxicillin500_28, $cloxicillin500_56, $cloxacillin250, $cloxacillin125, $cefuroxime_zegen250, $cefuroxime_zegen500, $cefuroxime250, $cefuroxime125, $levofloxacin750, $levofloxacin750_14, $fluconazole150, $levox500, $ciprobay1000, $myrin-p_forte120, $myrin-p_forte90, $myrin120, $marin90, $refampicin300, $refampicin200_tbsp, $refampicin200_tsp, );
+        $result = $arrayName = array($zegen500, $unasyn625, $co-amoxiclav625, $cloxicillin500_28, $cloxicillin500_56, $cloxacillin250, $cloxacillin125, $cefuroxime_zegen250, $cefuroxime_zegen500, $cefuroxime250, $cefuroxime125, $levofloxacin750, $levofloxacin750_14, $fluconazole150, $levox500, $ciprobay1000, $myrin-p_forte120, $myrin-p_forte90, $myrin120, $marin90, $refampicin300, $refampicin200_tbsp, $refampicin200_tsp, );
         // end of Antimicrobial Medications
 
-        $pdf = PDF::loadView('print.prescription', compact('antimicrobials', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Prescription-Request.pdf');
+        array_filter($result, function($v){return!empty($v);});
+        $array = array_map('array_filter', $result);
+        $antimicrobials = array_filter($array, function($x){ return!empty($x);});
+
+        $pdf = PDF::loadView('print.antimicrobial', compact('antimicrobials', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        return $pdf->stream('Prescription_antimicrobial_request.pdf');
     }
 
     public function injectable(Request $request, $id){
@@ -639,13 +647,163 @@ class PrintController extends Controller
 
         $syringe_10_cc = $request->input('10_cc_syringe');
 
-        $injectables = $arrayName = array($diprospan1_1, $diprospan1_2, $teriparatide_forteo, $zolendronic_acid_osteomet4, $hyruan_plus2, $high_hyal_plus2, $d50_glucose, $lidocaine2_1, $lidocaine2_2, $syringe_1_cc, $syringe_5_cc, $syringe_10_cc, );
+        $result = $arrayName = array($diprospan1_1, $diprospan1_2, $teriparatide_forteo, $zolendronic_acid_osteomet4, $hyruan_plus2, $high_hyal_plus2, $d50_glucose, $lidocaine2_1, $lidocaine2_2, $syringe_1_cc, $syringe_5_cc, $syringe_10_cc, );
         // end of injectables
 
-        $pdf = PDF::loadView('print.prescription', compact('injectables', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Prescription-Request.pdf');
+        array_filter($result, function($v){return!empty($v);});
+        $array = array_map('array_filter', $result);
+        $injectables = array_filter($array, function($x){ return!empty($x);});
+
+        $pdf = PDF::loadView('print.injectables', compact('injectables', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        return $pdf->stream('Prescription_injectables_request.pdf');
     }
 
+    public function dressing(Request $request, $id){
+        $dates = Date::findOrFail($id);
+        $patients = Patient::findOrFail($dates->patients_id);
+
+        // dressing materials and injectables
+        $syringe_1_cc = $request->input('1_cc_syringe');
+        $syringe_5_cc = $request->input('5_cc_syringe');
+        $syringe_10_cc = $request->input('10_cc_syringe');
+        $sterile_gauze_pads_10 = $request->input('sterile_gauze_pads_10');
+        $sterile_gauze_pads_20 = $request->input('sterile_gauze_pads_20');
+        $sterile_gauze_pads_30 = $request->input('sterile_gauze_pads_30');
+        $working_globes_box_1 = $request->input('working_globes_box_1');
+        $one_inch_hypoallergenic_plaster_1 = $request->input('1_inch_hypoallergenic_plaster_1');
+        $velcro_elastic_bondage_4_inches_2 = $request->input('velcro_elastic_bondage_4_inches_2');
+        $velcro_elastic_bondage_6_inches_2 = $request->input('velcro_elastic_bondage_6_inches_2');
+        $hydrogen_peroxide_50_ml_bot_1 = $request->input('hydrogen_peroxide_50_ml_bot_1');
+        $tenpercent_betadine_soln_10_ml_bot_1 = $request->input('tenpercent_betadine_soln_10_ml_bot_1');
+        $pnss_1l_bot_1 = $request->input('pnss_1l_bot_1');
+        $cutasep_f_50ml_bot_1 = $request->input('cutasep_f_50ml_bot_1');
+        $cutasep_f_250ml_bot_1 = $request->input('cutasep_f_250ml_bot_1');
+        $prontosan_wound_irrigation_soln_bot_1 = $request->input('prontosan_wound_irrigation_soln_bot_1');
+        $intrasite_gel_1 = $request->input('intrasite_gel_1');
+        $iodosorb_powder_1 = $request->input('iodosorb_powder_1');
+        $iodosorb_gel_1 = $request->input('iodosorb_gel_1');
+        $mebo_gel_1 = $request->input('mebo_gel_1');
+        $acticoat_dressing_3 = $request->input('acticoat_dressing_3');
+        $allevyn_dressing_3 = $request->input('allevyn_dressing_3');
+        $bactigrass_2 = $request->input('bactigrass_2');
+        $mupirocin_bactroban_ointment_2 = $request->input('mupirocin_(bactroban)_ointment_2');
+        $silver_sulfadiazine_flammazine_cream_2 = $request->input('silver_sulfadiazine_(flammazine)_cream_2');
+        $opsite_post_op_6cm_2 = $request->input('opsite_post_op_6cm_2');
+        $opsite_post_op_10cm_2 = $request->input('opsite_post_op_10cm_2');
+        $opsite_post_op_15cm_2 = $request->input('opsite_post_op_15cm_2');
+        $opsite_post_op_20cm_2 = $request->input('opsite_post_op_20cm_2');
+        $opsite_post_op_25cm_2 = $request->input('opsite_post_op_25cm_2');
+        $opsite_post_op_30cm_2 = $request->input('opsite_post_op_30cm_2');
+        $aquacel_ag_dressing_2 = $request->input('aquacel_ag_dressing_2');
+        $kaltostat_dressing_2 = $request->input('kaltostat_dressing_2');
+
+        $result = array($syringe_1_cc, $syringe_5_cc, $syringe_10_cc, $sterile_gauze_pads_10, $sterile_gauze_pads_20, $sterile_gauze_pads_30, $working_globes_box_1, $one_inch_hypoallergenic_plaster_1, $velcro_elastic_bondage_4_inches_2, $velcro_elastic_bondage_6_inches_2, $hydrogen_peroxide_50_ml_bot_1, $tenpercent_betadine_soln_10_ml_bot_1, $pnss_1l_bot_1, $cutasep_f_50ml_bot_1, $cutasep_f_250ml_bot_1, $prontosan_wound_irrigation_soln_bot_1, $intrasite_gel_1, $iodosorb_powder_1, $iodosorb_gel_1, $mebo_gel_1, $acticoat_dressing_3, $allevyn_dressing_3, $bactigrass_2, $mupirocin_bactroban_ointment_2, $silver_sulfadiazine_flammazine_cream_2, $opsite_post_op_6cm_2, $opsite_post_op_10cm_2, $opsite_post_op_15cm_2, $opsite_post_op_20cm_2, $opsite_post_op_25cm_2, $opsite_post_op_30cm_2, $aquacel_ag_dressing_2, );
+
+        array_filter($result, function($v){return!empty($v);});
+        $array = array_map('array_filter', $result);
+        $dressings = array_filter($array, function($x){ return!empty($x);});
+
+        $pdf = PDF::loadView('print.dressing', compact('dressings', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        return $pdf->stream('Prescription_dressing_request.pdf');
+        
+
+    }
+
+    public function castingMaterials(Request $request, $id){
+        $dates = Date::findOrFail($id);
+        $patients = Patient::findOrFail($dates->patients_id);
+
+        $three_inch_long_bone_fiber_cast_1 = $request->input('three_inch_long_bone_fiber_cast_1');
+        $three_inch_long_bone_fiber_cast_2 = $request->input('three_inch_long_bone_fiber_cast_2');
+        $four_inch_long_bone_fiber_cast_1 = $request->input('four_inch_long_bone_fiber_cast_1');
+        $four_inch_long_bone_fiber_cast_2 = $request->input('four_inch_long_bone_fiber_cast_2');
+        $five_inch_long_bone_fiber_cast_1 = $request->input('five_inch_long_bone_fiber_cast_1');
+        $five_inch_long_bone_fiber_cast_2 = $request->input('five_inch_long_bone_fiber_cast_2');
+        $four_inch_long_bone_fiber_splint_1 = $request->input('four_inch_long_bone_fiber_splint_1');
+        $five_inch_long_bone_fiber_splint_1 = $request->input('five_inch_long_bone_fiber_splint_1');
+        $three_inch_primecast_fiber_cast_1 = $request->input('three_inch_primecast_fiber_cast_1');
+        $three_inch_primecast_fiber_cast_2 = $request->input('three_inch_primecast_fiber_cast_2');
+        $four_inch_primecast_fiber_cast_1 = $request->input('four_inch_primecast_fiber_cast_1');
+        $four_inch_primecast_fiber_cast_2 = $request->input('four_inch_primecast_fiber_cast_2');
+        $five_inch_primecast_fiber_cast_1 = $request->input('five_inch_primecast_fiber_cast_1');
+        $five_inch_primecast_fiber_cast_2 = $request->input('five_inch_primecast_fiber_cast_2');
+        $four_inch_primecast_fiber_splint_1 = $request->input('four_inch_primecast_fiber_splint_1');
+        $five_inch_primecast_fiber_splint_1 = $request->input('five_inch_primecast_fiber_splint_1');
+        $stockinet_3_inches_1_yard = $request->input('stockinet_3_inches_1_yard');
+        $stockinet_4_inches_1_yard = $request->input('stockinet_4_inches_1_yard');
+        $stockinet_5_inches_1_yard = $request->input('stockinet_5_inches_1_yard');
+        $velcro_elastic_bondage_2_inches_1 = $request->input('velcro_elastic_bondage_2_inches_1');
+        $velcro_elastic_bondage_2_inches_2 = $request->input('velcro_elastic_bondage_2_inches_2');
+        $velcro_elastic_bondage_3_inches_1 = $request->input('velcro_elastic_bondage_3_inches_1');
+        $velcro_elastic_bondage_3_inches_2 = $request->input('velcro_elastic_bondage_3_inches_2');
+        $velcro_elastic_bondage_4_inches_1 = $request->input('velcro_elastic_bondage_4_inches_1');
+        $velcro_elastic_bondage_4_inches_2 = $request->input('velcro_elastic_bondage_4_inches_2');
+        $velcro_elastic_bondage_5_inches_1 = $request->input('velcro_elastic_bondage_5_inches_1');
+        $velcro_elastic_bondage_5_inches_2 = $request->input('velcro_elastic_bondage_5_inches_2');
+        $primecast_wadding_sheet_4_inches_1 = $request->input('primecast_wadding_sheet_4_inches_1');
+        $primecast_wadding_sheet_4_inches_2 = $request->input('primecast_wadding_sheet_4_inches_2');
+        $primecast_wadding_sheet_6_inches_1 = $request->input('primecast_wadding_sheet_6_inches_1');
+        $primecast_wadding_sheet_6_inches_2 = $request->input('primecast_wadding_sheet_6_inches_2');
+        $long_bone_armsling_small_size_1 = $request->input('long_bone_armsling_small_size_1');
+        $long_bone_armsling_medium_size_1 = $request->input('long_bone_armsling_medium_size_1');
+        $long_bone_armsling_large_size_1 = $request->input('long_bone_armsling_large_size_1');
+        $long_bone_armsling_xl_size_1 = $request->input('long_bone_armsling_xl_size_1');
+        $long_bone_armsling_kiddie_size_1 = $request->input('long_bone_armsling_kiddie_size_1');
+
+        $result = array($three_inch_long_bone_fiber_cast_1, $three_inch_long_bone_fiber_cast_2, $four_inch_long_bone_fiber_cast_1 ,$four_inch_long_bone_fiber_cast_2, $five_inch_long_bone_fiber_cast_1 ,$five_inch_long_bone_fiber_cast_2, $four_inch_long_bone_fiber_splint_1, $five_inch_long_bone_fiber_splint_1, $three_inch_primecast_fiber_cast_1, $three_inch_primecast_fiber_cast_2, $four_inch_primecast_fiber_cast_1, $four_inch_primecast_fiber_cast_2, $five_inch_primecast_fiber_cast_1, $five_inch_primecast_fiber_cast_2, $four_inch_primecast_fiber_splint_1, $five_inch_primecast_fiber_splint_1, $stockinet_3_inches_1_yard, $stockinet_4_inches_1_yard, $stockinet_5_inches_1_yard, $velcro_elastic_bondage_2_inches_1, $velcro_elastic_bondage_2_inches_2, $velcro_elastic_bondage_3_inches_1, $velcro_elastic_bondage_3_inches_2, $velcro_elastic_bondage_4_inches_1, $velcro_elastic_bondage_4_inches_2, $velcro_elastic_bondage_5_inches_1, $velcro_elastic_bondage_5_inches_2, $primecast_wadding_sheet_4_inches_1, $primecast_wadding_sheet_4_inches_2, $primecast_wadding_sheet_6_inches_1, $primecast_wadding_sheet_6_inches_2, $long_bone_armsling_small_size_1, $long_bone_armsling_medium_size_1, $long_bone_armsling_large_size_1, $long_bone_armsling_xl_size_1, $long_bone_armsling_kiddie_size_1, );
+
+        array_filter($result, function($v){return!empty($v);});
+        $array = array_map('array_filter', $result);
+        $castingmaterials = array_filter($array, function($x){ return!empty($x);});
+
+        $pdf = PDF::loadView('print.castingmaterials', compact('castingmaterials', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        return $pdf->stream('Prescription_casting_materials_request.pdf');
+
+
+    }
+
+    public function orthopedicsProstheses(Request $request, $id){
+        $dates = Date::findOrFail($id);
+        $patients = Patient::findOrFail($dates->patients_id);
+
+        $soft_collar_small_1 = $request->input('soft_collar_small_1');
+        $soft_collar_medium_1 = $request->input('soft_collar_medium_1');
+        $soft_collar_large_1 = $request->input('soft_collar_large_1');
+        $hard_collar_small_1 = $request->input('hard_collar_small_1');
+        $hard_collar_medium_1 = $request->input('hard_collar_medium_1');
+        $hard_collar_large_1 = $request->input('hard_collar_large_1');
+        $four_foster_brace = $request->input('four_foster_brace');
+        $halo_vest = $request->input('halo_vest');
+        $jewett_brace = $request->input('jewett_brace');
+        $knight_taylor_brace = $request->input('knight_taylor_brace');
+        $chairback_low_taylor_brace = $request->input('chairback_low_taylor_brace');
+        $milwaukee_brace = $request->input('milwaukee_brace');
+        $shoulder_compression_sleeve = $request->input('shoulder_compression_sleeve');
+        $humeral_fracture_brace = $request->input('humeral_fracture_brace');
+        $elbow_compression_sleeve = $request->input('elbow_compression_sleeve');
+        $static_wrist_splint = $request->input('static_wrist_splint');
+        $wrist_compression_sleeve = $request->input('wrist_compression_sleeve');
+        $ischial_weight_bearing_brace = $request->input('ischial_weight_bearing_brace');
+        $knee_compression_sleeve = $request->input('knee_compression_sleeve');
+        $knee_hinge_brace = $request->input('knee_hinge_brace');
+        $knee_immobilizer = $request->input('knee_immobilizer');
+        $patellar_tendon_strap = $request->input('patellar_tendon_strap');
+        $ankle_compression_sleeve = $request->input('ankle_compression_sleeve');
+        $walker_boots = $request->input('walker_boots');
+        $compression_foot_sleeve = $request->input('compression_foot_sleeve');
+        $silicon_insole_medial_arch_support = $request->input('silicon_insole_medial_arch_support');
+        $backjoy_sitsmart_posture_plus_travelclub = $request->input('backjoy_sitsmart_posture_plus_travelclub');
+
+        $result = array($soft_collar_small_1, $soft_collar_medium_1, $soft_collar_large_1, $hard_collar_small_1, $hard_collar_medium_1, $hard_collar_large_1, $four_foster_brace, $halo_vest, $jewett_brace, $knight_taylor_brace, $chairback_low_taylor_brace, $milwaukee_brace, $shoulder_compression_sleeve, $humeral_fracture_brace, $elbow_compression_sleeve, $static_wrist_splint, $wrist_compression_sleeve, $ischial_weight_bearing_brace, $knee_compression_sleeve, $knee_hinge_brace, $knee_immobilizer, $patellar_tendon_strap, $ankle_compression_sleeve, $walker_boots, $compression_foot_sleeve, $silicon_insole_medial_arch_support, $backjoy_sitsmart_posture_plus_travelclub, );
+
+        array_filter($result, function($v){return!empty($v);});
+        $array = array_map('array_filter', $result);
+        $orthopedicsprotheses = array_filter($array, function($x){ return!empty($x);});
+
+        $pdf = PDF::loadView('print.orthopedicsprotheses', compact('orthopedicprotheses', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        return $pdf->stream('Prescription_orthopedic_protheses_request.pdf');
+
+    }
 
 
     public function referralview($id){
