@@ -6,7 +6,7 @@ span.cls_002{font-family:"Calibri Bold",serif;font-size:15.0px;color:rgb(0,0,0);
 div.cls_002{font-family:"Calibri Bold",serif;font-size:15.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
 span.cls_003{font-family:"Calibri Bold",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
 div.cls_003{font-family:"Calibri Bold",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
-span.cls_004{font-family:"Calibri",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_004{font-famly:"Calibri",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 div.cls_004{font-family:"Calibri",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 span.cls_005{font-family:"Calibri",serif;font-size:5.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 div.cls_005{font-family:"Calibri",serif;font-size:5.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
@@ -58,8 +58,8 @@ div.cls_010{font-family:"Calibri",serif;font-size:14.1px;color:rgb(0,0,0);font-w
 			<tbody>
 				@foreach($relaxants as $info)
 					@foreach($info as $data)
-						<tr style="padding-top: -40px;">
-							<td><i>{{$data}}</i></td>
+						<tr>
+							<td style="font-size: 12px; padding-top: -25px; padding-left: 35px; padding-bottom: 28px;"><i>{{$data}}</i></td>
 						</tr>
 					@endforeach
 				@endforeach

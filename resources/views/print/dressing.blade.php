@@ -59,7 +59,7 @@ div.cls_010{font-family:"Calibri",serif;font-size:14.1px;color:rgb(0,0,0);font-w
 				@foreach($dressings as $info)
 					@foreach($info as $data)
 						<tr>
-							<td>{{$data}}</td>
+							<td style="font-size: 12px; padding-top: -25px; padding-left: 35px; padding-bottom: 28px;">{{$data}}</td>
 						</tr>
 					@endforeach
 				@endforeach

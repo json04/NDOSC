@@ -505,7 +505,7 @@ class PrintController extends Controller
         $result_appebon_kid120 = $request->input('appebon_kid120');
         $appebon_kid120 = explode('|', $result_appebon_kid120);
 
-        $result = $arrayName = array($mecobalamine500, $deiprospan, $fosavance6500, $reventa, $bonviva150, $polynerve1000, $meganerve1000, $mecobalamine_methycobal500_6, $mecobalamine_methycobal500_90, $immunpro, $caltrate, $calciumade, $appebon, $appetite_plus, $appetens, $appebon_kid120, );
+        $result = $arrayName = array($mecobalamine500, $diprospan, $fosavance6500, $reventa, $bonviva150, $polynerve1000, $meganerve1000, $mecobalamine_methycobal500_6, $mecobalamine_methycobal500_90, $immunpro, $caltrate, $calciumade, $appebon, $appetite_plus, $appetens, $appebon_kid120, );
         // end of Misc Supplements
 
         array_filter($result, function($v){return!empty($v);});

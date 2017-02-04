@@ -1477,9 +1477,120 @@
 				<h3 title="title" align="center">MEDICATIONS</h3>
 				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
 			</div>
+			<form action="/miscsupplement/{{$dates->id}}" method="post">
+			{{ csrf_field() }}
+				<h4 class="title" align="center">Misc Supplements</h4>
+				<div class="col-md-12 col-md-offset-2 col-sm-12">
+				{{-- DRESSING MATERIALS --}}
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="mecobalamine500" value="Mecobalamine 500mcg tab # 30|Sig. 1 tab 3x a day">
+									Mecobalamine 500mcg tab # 30<br>
+									&emsp;&emsp;Sig. 1 tab 3x a day
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="deiprospan" value="Diprospan amp # 1|Sig. AD">
+									Diprospan amp # 1<br>
+									&emsp;&emsp;Sig. AD
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="fosavance6500" value="Fosavance 6500IU tab # 8|Sig. 1 tab 1x a week in a.m before any intake">
+									Fosavance 6500IU tab # 8 <br>
+									&emsp;&emsp;Sig. 1 tab 1x a week in a.m before any intake
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="reventa" value="Reventa tab # 8|Sig. 1 tab 1x a week in a.m before any intake">
+									Reventa tab # 8<br>
+									&emsp;&emsp;Sig. 1 tab 1x a week in a.m before any intake
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="bonviva150" value="Bonviva 150mg tab # 4|Sig. 1 tab 1x a month in a.m before any intake.">
+									Bonviva 150mg tab # 4<br>
+									&emsp;&emsp;Sig. 1 tab 1x a month in a.m before any intake.
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="polynerve1000" value="Polynerve 1000 tab # 60|sig. 1 tablet 2x a day">
+									Polynerve 1000 tab # 60<br>
+									&emsp;&emsp;sig. 1 tablet 2x a day"
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="meganerve1000" value="Meganerve 1000 tab # 60|sig. 1 tablet 2x a day">
+									Meganerve 1000 tab # 60<br>
+									&emsp;&emsp;sig. 1 tablet 2x a day
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="mecobalamine_methycobal500_6" value="Mecobalamine(Methycobal) 500mcg amp# 6|sig. 1 amp via IM injection every 2 days">
+									Mecobalamine(Methycobal) 500mcg amp# 6<br>
+									&emsp;&emsp;sig. 1 amp via IM injection every 2 days
+								</label><br>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="mecobalamine_methycobal500_90" value="Mecobalamine(Methycobal) 500mcg tab # 90|sig. 1 tablet 3x a day">
+									Mecobalamine(Methycobal) 500mcg tab # 90<br>
+									&emsp;&emsp;sig. 1 tablet 3x a day
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="immunpro" value="ImmunPro tab # 30|sig. 1 tablet once a day after meal">
+									ImmunPro tab # 30<br>
+									&emsp;&emsp;sig. 1 tablet once a day after meal
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="caltrate" value="Caltrate tab #60|Sig. I tab 2x a day">
+									Caltrate tab #60<br>
+									&emsp;&emsp;Sig. I tab 2x a day
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="calciumade" value="Calciumade tab #60|Sig 1 tab 2x a day">
+									Calciumade tab #60<br>
+									&emsp;&emsp;Sig 1 tab 2x a day
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="appebon" value="Appebon tab# 30|Sig. 1 tablet 1x a day">
+									Appebon tab# 30<br>
+									&emsp;&emsp;Sig. 1 tablet 1x a day
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="appetite_plus" value="Appetite Plus tab # 30|sig. 1 tablet 1 a day">
+									Appetite Plus tab # 30<br>
+									&emsp;&emsp;sig. 1 tablet 1 a day
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="appetens" value="Appetens tab # 30|sig. 1 tablet 1 x a day">
+									Appetens tab # 30<br>
+									&emsp;&emsp;sig. 1 tablet 1 x a day
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="appebon_kid120" value="Appebon Kid 120ml Syrup bot # 2|Sig. 1 tsp 1x a day">
+									Appebon Kid 120ml Syrup bot # 2<br>
+									&emsp;&emsp;Sig. 1 tsp 1x a day
+								</label><br>
+							</div>
+						</div>
+					</div>
+					{{--  --}}
+				</div>
+				<div class="col-md-12" align="center">
+					<p title="description">Review all the selected check box before submitting.</p>
+					<button class="btn btn-md btn-danger">SUBMIT</button>
+				</div>
+			</form>
+		</div>
+		<hr>
+		<div class="container">
+			<div class="row">
+				<h3 title="title" align="center">MEDICATIONS</h3>
+				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
+			</div>
 			<form action="#" method="post">
 			{{ csrf_field() }}
-				<h4 class="title" align="center">DRESSING MATERIALS</h4>
+				<h4 class="title" align="center">Antimicrobials</h4>
 				<div class="col-md-12 col-md-offset-2 col-sm-12">
 				{{-- DRESSING MATERIALS --}}
 					<div class="row">
@@ -1502,6 +1613,96 @@
 		</div>
 		<hr>
 		{{-- End of Container --}}
+
+		<div class="container">
+			<div class="row">
+				<h3 title="title" align="center">MEDICATIONS</h3>
+				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
+			</div>
+			<form action="#" method="post">
+			{{ csrf_field() }}
+				<h4 class="title" align="center">Injectables</h4>
+				<div class="col-md-12 col-md-offset-2 col-sm-12">
+				{{-- DRESSING MATERIALS --}}
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="" value="">
+									
+								</label><br>
+							</div>
+						</div>
+					</div>
+					{{--  --}}
+				</div>
+				<div class="col-md-12" align="center">
+					<p title="description">Review all the selected check box before submitting.</p>
+					<button class="btn btn-md btn-danger">SUBMIT</button>
+				</div>
+			</form>
+		</div>
+		<hr>
+
+		<div class="container">
+			<div class="row">
+				<h3 title="title" align="center">MEDICATIONS</h3>
+				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
+			</div>
+			<form action="#" method="post">
+			{{ csrf_field() }}
+				<h4 class="title" align="center">Dressing Materials</h4>
+				<div class="col-md-12 col-md-offset-2 col-sm-12">
+				{{-- DRESSING MATERIALS --}}
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="" value="">
+									
+								</label><br>
+							</div>
+						</div>
+					</div>
+					{{--  --}}
+				</div>
+				<div class="col-md-12" align="center">
+					<p title="description">Review all the selected check box before submitting.</p>
+					<button class="btn btn-md btn-danger">SUBMIT</button>
+				</div>
+			</form>
+		</div>
+		<hr>
+
+		<div class="container">
+			<div class="row">
+				<h3 title="title" align="center">MEDICATIONS</h3>
+				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
+			</div>
+			<form action="#" method="post">
+			{{ csrf_field() }}
+				<h4 class="title" align="center">Orthopedics/Protheses</h4>
+				<div class="col-md-12 col-md-offset-2 col-sm-12">
+				{{-- DRESSING MATERIALS --}}
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="" value="">
+									
+								</label><br>
+							</div>
+						</div>
+					</div>
+					{{--  --}}
+				</div>
+				<div class="col-md-12" align="center">
+					<p title="description">Review all the selected check box before submitting.</p>
+					<button class="btn btn-md btn-danger">SUBMIT</button>
+				</div>
+			</form>
+		</div>
+		<hr>
 	</div>
 	{{-- End of Main Raised --}}
 @endsection
