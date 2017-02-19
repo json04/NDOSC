@@ -1527,54 +1527,51 @@
 								</label><br>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 col-sm-6">
-							<div class="checkbox">
-								<label style="color: black;"> 
-									<input type="checkbox" name="mecobalamine_methycobal500_90" value="Mecobalamine(Methycobal) 500mcg tab # 90|sig. 1 tablet 3x a day">
-									Mecobalamine(Methycobal) 500mcg tab # 90<br>
-									&emsp;&emsp;sig. 1 tablet 3x a day
-								</label><br>
-								<label style="color: black;"> 
-									<input type="checkbox" name="immunpro" value="ImmunPro tab # 30|sig. 1 tablet once a day after meal">
-									ImmunPro tab # 30<br>
-									&emsp;&emsp;sig. 1 tablet once a day after meal
-								</label><br>
-								<label style="color: black;"> 
-									<input type="checkbox" name="caltrate" value="Caltrate tab #60|Sig. I tab 2x a day">
-									Caltrate tab #60<br>
-									&emsp;&emsp;Sig. I tab 2x a day
-								</label><br>
-								<label style="color: black;"> 
-									<input type="checkbox" name="calciumade" value="Calciumade tab #60|Sig 1 tab 2x a day">
-									Calciumade tab #60<br>
-									&emsp;&emsp;Sig 1 tab 2x a day
-								</label><br>
-								<label style="color: black;"> 
-									<input type="checkbox" name="appebon" value="Appebon tab# 30|Sig. 1 tablet 1x a day">
-									Appebon tab# 30<br>
-									&emsp;&emsp;Sig. 1 tablet 1x a day
-								</label><br>
-								<label style="color: black;"> 
-									<input type="checkbox" name="appetite_plus" value="Appetite Plus tab # 30|sig. 1 tablet 1 a day">
-									Appetite Plus tab # 30<br>
-									&emsp;&emsp;sig. 1 tablet 1 a day
-								</label><br>
-								<label style="color: black;"> 
-									<input type="checkbox" name="appetens" value="Appetens tab # 30|sig. 1 tablet 1 x a day">
-									Appetens tab # 30<br>
-									&emsp;&emsp;sig. 1 tablet 1 x a day
-								</label><br>
-								<label style="color: black;"> 
-									<input type="checkbox" name="appebon_kid120" value="Appebon Kid 120ml Syrup bot # 2|Sig. 1 tsp 1x a day">
-									Appebon Kid 120ml Syrup bot # 2<br>
-									&emsp;&emsp;Sig. 1 tsp 1x a day
-								</label><br>
-							</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="mecobalamine_methycobal500_90" value="Mecobalamine(Methycobal) 500mcg tab # 90|sig. 1 tablet 3x a day">
+								Mecobalamine(Methycobal) 500mcg tab # 90<br>
+								&emsp;&emsp;sig. 1 tablet 3x a day
+							</label><br>
+							<label style="color: black;"> 
+								<input type="checkbox" name="immunpro" value="ImmunPro tab # 30|sig. 1 tablet once a day after meal">
+								ImmunPro tab # 30<br>
+								&emsp;&emsp;sig. 1 tablet once a day after meal
+							</label><br>
+							<label style="color: black;"> 
+								<input type="checkbox" name="caltrate" value="Caltrate tab #60|Sig. I tab 2x a day">
+								Caltrate tab #60<br>
+								&emsp;&emsp;Sig. I tab 2x a day
+							</label><br>
+							<label style="color: black;"> 
+								<input type="checkbox" name="calciumade" value="Calciumade tab #60|Sig 1 tab 2x a day">
+								Calciumade tab #60<br>
+								&emsp;&emsp;Sig 1 tab 2x a day
+							</label><br>
+							<label style="color: black;"> 
+								<input type="checkbox" name="appebon" value="Appebon tab# 30|Sig. 1 tablet 1x a day">
+								Appebon tab# 30<br>
+								&emsp;&emsp;Sig. 1 tablet 1x a day
+							</label><br>
+							<label style="color: black;"> 
+								<input type="checkbox" name="appetite_plus" value="Appetite Plus tab # 30|sig. 1 tablet 1 a day">
+								Appetite Plus tab # 30<br>
+								&emsp;&emsp;sig. 1 tablet 1 a day
+							</label><br>
+							<label style="color: black;"> 
+								<input type="checkbox" name="appetens" value="Appetens tab # 30|sig. 1 tablet 1 x a day">
+								Appetens tab # 30<br>
+								&emsp;&emsp;sig. 1 tablet 1 x a day
+							</label><br>
+							<label style="color: black;"> 
+								<input type="checkbox" name="appebon_kid120" value="Appebon Kid 120ml Syrup bot # 2|Sig. 1 tsp 1x a day">
+								Appebon Kid 120ml Syrup bot # 2<br>
+								&emsp;&emsp;Sig. 1 tsp 1x a day
+							</label><br>
 						</div>
 					</div>
-					{{--  --}}
+				</div>
 				</div>
 				<div class="col-md-12" align="center">
 					<p title="description">Review all the selected check box before submitting.</p>
@@ -1597,7 +1594,120 @@
 						<div class="col-md-6 col-sm-6">
 							<div class="checkbox">
 								<label style="color: black;"> 
-									<input type="checkbox" name="" value="">
+									<input type="checkbox" name="zegen500" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="unasyn625" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="co_amoxiclav625" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="cloxicillin500_28" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="cloxicillin500_56" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="cloxacillin250" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="cloxacillin125" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="cefuroxime_zegen250" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="cefuroxime_zegen500" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="cefuroxime250" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="cefuroxime125" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="levofloxacin750" value="">
+									
+								</label><br>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="levofloxacin750_14" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="fluconazole150" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="levox500" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="ciprobay1000" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="myrin_p_forte120" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="myrin_p_forte90" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="myrin120" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="marin90" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="refampicin300" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="refampicin200_tbsp" value="">
+									
+								</label><br>
+
+								<label style="color: black;"> 
+									<input type="checkbox" name="refampicin200_tsp" value="">
 									
 								</label><br>
 							</div>
