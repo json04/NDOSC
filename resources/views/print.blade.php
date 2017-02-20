@@ -1594,121 +1594,144 @@
 						<div class="col-md-6 col-sm-6">
 							<div class="checkbox">
 								<label style="color: black;"> 
-									<input type="checkbox" name="zegen500" value="">
-									
+									<input type="checkbox" name="zegen500" value="Zegen 500mg tab # 14|Sig. 1 tab 2x a day">
+								Zegen 500mg tab # 14<br>
+								&emsp;&emsp;Sig. 1 tab 2x a day	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="unasyn625" value="">
-									
+									<input type="checkbox" name="unasyn625" value="Unasyn 625mg tab # 14|Sig. 1 tab 2x a day">
+								Unasyn 625mg tab # 14<br>
+								&emsp;&emsp;Sig. 1 tab 2x a day
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="co_amoxiclav625" value="">
-									
+									<input type="checkbox" name="co_amoxiclav625" value="Co-Amoxiclav 625mg tab # 14|Sig. 1 tablet 2x a day">
+								Co-Amoxiclav 625mg tab # 14<br>
+								&emsp;&emsp;Sig. 1 tablet 2x a day
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="cloxicillin500_28" value="">
-									
+									<input type="checkbox" name="cloxicillin500_28" value="Cloxicillin 500mg cap # 28|Sig. 1 capsule 4 x a day">
+								Cloxicillin 500mg cap # 28<br>
+								&emsp;&emsp;Sig. 1 capsule 4 x a day	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="cloxicillin500_56" value="">
-									
+									<input type="checkbox" name="cloxicillin500_56" value="Cloxicillin 500mg cap # 56|Sig. 1 capsule x a day for 14 days">
+								Cloxicillin 500mg cap # 56<br>
+								&emsp;&emsp;Sig. 1 capsule x a day for 14 days	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="cloxacillin250" value="">
-									
+									<input type="checkbox" name="cloxacillin250" value="Cloxacillin 250mg/5ml bot # 4|Sig. 1 tsp 3 x a day for 14 days">
+								Cloxacillin 250mg/5ml bot # 4<br>
+								&emsp;&emsp;Sig. 1 tsp 3 x a day for 14 days	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="cloxacillin125" value="">
-									
+									<input type="checkbox" name="cloxacillin125" value="Cloxacillin 125mg/5ml bot # 4|Sig. 1 tsp 3 x a day for 14 days">
+								Cloxacillin 125mg/5ml bot # 4<br>
+								&emsp;&emsp;Sig. 1 tsp 3 x a day for 14 days	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="cefuroxime_zegen250" value="">
-									
+									<input type="checkbox" name="cefuroxime_zegen250" value="Cefuroxime(Zegen) 250mg cap # 14|Sig. 1 capsule 2x a day">
+								Cefuroxime(Zegen) 250mg cap # 14<br>
+								&emsp;&emsp;Sig. 1 capsule 2x a day	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="cefuroxime_zegen500" value="">
-									
+									<input type="checkbox" name="cefuroxime_zegen500" value="Cefuroxime(Zegen) 500mg cap # 14|Sig. 1 capsule 2x a day">
+								Cefuroxime(Zegen) 500mg cap # 14<br>
+								&emsp;&emsp;Sig. 1 capsule 2x a day	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="cefuroxime250" value="">
-									
+									<input type="checkbox" name="cefuroxime250" value="Cefuroxime 250mg/5ml 50ml bot # 2|Sig. 1 tsp 2 x a day">
+								Cefuroxime 250mg/5ml 50ml bot # 2<br>
+								&emsp;&emsp;Sig. 1 tsp 2 x a day	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="cefuroxime125" value="">
-									
+									<input type="checkbox" name="cefuroxime125" value="Cefuroxime 125mg/5ml 50ml bot # 2|Sig. 1 tsp 2 x a day">
+								Cefuroxime 125mg/5ml 50ml bot # 2<br>
+								&emsp;&emsp;Sig. 1 tsp 2 x a day	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="levofloxacin750" value="">
-									
+									<input type="checkbox" name="levofloxacin750" value="Levofloxacin 750mg tab # 7|Sig. 1 tablet once a day">
+								Levofloxacin 750mg tab # 7<br>
+								&emsp;&emsp;Sig. 1 tablet once a day	
 								</label><br>
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
 							<div class="checkbox">
 								<label style="color: black;"> 
-									<input type="checkbox" name="levofloxacin750_14" value="">
-									
+									<input type="checkbox" name="levofloxacin750_14" value="Levofloxacin 750mg tab # 7|Levofloxacin 750mg tab # 7">
+								Levofloxacin 750mg tab # 7<br>
+								&emsp;&emsp;Levofloxacin 750mg tab # 7	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="fluconazole150" value="">
-									
+									<input type="checkbox" name="fluconazole150" value="Fluconazole 150mg tab # 14|Sig. 1 tablet 1 x a day for 2 weeks">
+								Fluconazole 150mg tab # 14<br>
+								&emsp;&emsp;Sig. 1 tablet 1 x a day for 2 weeks	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="levox500" value="">
-									
+									<input type="checkbox" name="levox500" value="Levox 500mg tab # 7|Sig. 1 tab once  a day">
+								Levox 500mg tab # 7<br>
+								&emsp;&emsp;Sig. 1 tab once  a day	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="ciprobay1000" value="">
-									
+									<input type="checkbox" name="ciprobay1000" value="Ciprobay 1000mg tab # 7|Sig. 1 tab 1x a day">
+								Ciprobay 1000mg tab # 7<br>
+								&emsp;&emsp;Sig. 1 tab 1x a day	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="myrin_p_forte120" value="">
-									
+									<input type="checkbox" name="myrin_p_forte120" value="Myrin-P Forte tab # 120|Sig. 4 tablets in a.m 1hr before food intake">
+								Myrin-P Forte tab # 120<br>
+								&emsp;&emsp;Sig. 4 tablets in a.m 1hr before food intake	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="myrin_p_forte90" value="">
-									
+									<input type="checkbox" name="myrin_p_forte90" value="Myrin-P Forte tab # 90|Sig. 3 tabs OD in 1hr a.m before meal">
+								Myrin-P Forte tab # 90<br>
+								&emsp;&emsp;Sig. 3 tabs OD in 1hr a.m before meal	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="myrin120" value="">
-									
+									<input type="checkbox" name="myrin120" value="Myrin tab # 120|Sig. 4 tablets in a.m 1 hr before food intake">
+								Myrin tab # 120<br>
+								&emsp;&emsp;Sig. 4 tablets in a.m 1 hr before food intake	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="marin90" value="">
-									
+									<input type="checkbox" name="marin90" value="Myrin tab # 90|Sig. 3 tablets in a.m 1 hr before food intake">
+								Myrin tab # 90<br>
+								&emsp;&emsp;Sig. 3 tablets in a.m 1 hr before food intake	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="refampicin300" value="">
-									
+									<input type="checkbox" name="refampicin300" value="Rifampicin 300mg tab # 14|Sig. 1 tablet once a day">
+								Rifampicin 300mg tab # 14<br>
+								&emsp;&emsp;Sig. 1 tablet once a day	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="refampicin200_tbsp" value="">
-									
+									<input type="checkbox" name="refampicin200_tbsp" value="Rifampicin 200mg/5ml 120ml bot # 2|Sig. 1 tbsp once a day in a.m before food intake">
+								Rifampicin 200mg/5ml 120ml bot # 2<br>
+								&emsp;&emsp;Sig. 1 tbsp once a day in a.m before food intake	
 								</label><br>
 
 								<label style="color: black;"> 
-									<input type="checkbox" name="refampicin200_tsp" value="">
-									
+									<input type="checkbox" name="refampicin200_tsp" value="Rifampicin 200mg/5ml 120ml bot # 2|Sig. 1 tsp once a day in a.m before food intake">
+								Rifampicin 200mg/5ml 120ml bot # 2<br>
+								&emsp;&emsp;Sig. 1 tsp once a day in a.m before food intake	
 								</label><br>
 							</div>
 						</div>
