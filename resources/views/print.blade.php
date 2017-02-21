@@ -1585,7 +1585,7 @@
 				<h3 title="title" align="center">MEDICATIONS</h3>
 				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
 			</div>
-			<form action="#" method="post">
+			<form action="/antimicrobials/{{$dates->id}}" method="post">
 			{{ csrf_field() }}
 				<h4 class="title" align="center">Antimicrobials</h4>
 				<div class="col-md-12 col-md-offset-2 col-sm-12">
@@ -1752,7 +1752,7 @@
 				<h3 title="title" align="center">MEDICATIONS</h3>
 				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
 			</div>
-			<form action="#" method="post">
+			<form action="/injectables/{{$dates->id}}" method="post">
 			{{ csrf_field() }}
 				<h4 class="title" align="center">Injectables</h4>
 				<div class="col-md-12 col-md-offset-2 col-sm-12">
@@ -1761,11 +1761,65 @@
 						<div class="col-md-6 col-sm-6">
 							<div class="checkbox">
 								<label style="color: black;"> 
-									<input type="checkbox" name="" value="">
-									
+									<input type="checkbox" name="diprospan1_1" value="Diprospan 1ml amp # 1|Sig. AD">
+									Diprospan 1ml amp # 1<br>
+									&emsp;&emsp;Sig. AD
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="diprospan1_2" value="Diprospan 1ml amp # 2|Sig. AD">
+									Diprospan 1ml amp # 2<br>
+									&emsp;&emsp;Sig. AD
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="teriparatide_forteo" value="Teriparatide(Forteo) multi dose prefilled pen set # 1">
+									Teriparatide(Forteo) multi dose prefilled pen set # 1
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="zolendronic_acid_osteomet4" value="Zolendronic Acid(Osteomet) 4mg via l # 1|Sig. 1 vial+ 20ml PNSS to be given in 20 min">
+									Zolendronic Acid(Osteomet) 4mg via l # 1<br>
+									&emsp;&emsp;Sig. 1 vial+ 20ml PNSS to be given in 20 min
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="hyruan_plus2" value="Hyruan Plus 2.5ml pre-filled syringe # 3|Sig. AD">
+									Hyruan Plus 2.5ml pre-filled syringe # 3<br>
+									&emsp;&emsp;Sig. AD
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="high_hyal_plus2" value="High Hyal Plus 2ml pre-filled syringe # 3|sig. AD">
+									High Hyal Plus 2ml pre-filled syringe # 3<br>
+									&emsp;&emsp;sig. AD
 								</label><br>
 							</div>
 						</div>
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="d50_glucose" value="D50 Glucose Injection bot # 1">
+									D50 Glucose Injection bot # 1
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="lidocaine2_1" value="Lidocaine 2% amp # 1">
+									Lidocaine 2% amp # 1
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="lidocaine2_2" value="Lidocaine 2% amp # 2">
+									Lidocaine 2% amp # 2
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="1_cc_syringe" value="1 cc syringe # 1">
+									1 cc syringe # 1
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="5_cc_syringe" value="5 cc syringe # 1">
+									5 cc syringe # 1
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="10_cc_syringe" value="10 cc syringe # 1">
+									10 cc syringe # 1
+								</label><br>
+							</div>
+						</div>
+
 					</div>
 					{{--  --}}
 				</div>
@@ -1782,7 +1836,7 @@
 				<h3 title="title" align="center">MEDICATIONS</h3>
 				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
 			</div>
-			<form action="#" method="post">
+			<form action="/dressing/{{$dates->id}}" method="post">
 			{{ csrf_field() }}
 				<h4 class="title" align="center">Dressing Materials</h4>
 				<div class="col-md-12 col-md-offset-2 col-sm-12">
@@ -1791,12 +1845,392 @@
 						<div class="col-md-6 col-sm-6">
 							<div class="checkbox">
 								<label style="color: black;"> 
-									<input type="checkbox" name="" value="">
-									
+									<input type="checkbox" name="1_cc_syringe" value="1 cc syringe # 1">
+									1 cc syringe # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="5_cc_syringe" value="5 cc syringe # 1">
+									5 cc syringe # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="10_cc_syringe" value="10 cc syringe # 1">
+									10 cc syringe # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="sterile_gauze_pads_10" value="Sterile gauze pads # 10">
+									Sterile gauze pads # 10<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="sterile_gauze_pads_20" value="Sterile gauze pads # 20">
+									Sterile gauze pads # 20<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="sterile_gauze_pads_30" value="Sterile gauze pads # 30">
+									Sterile gauze pads # 30<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="working_globes_box_1" value="Working gloves box # 1">
+									Working gloves box # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="1_inch_hypoallergenic_plaster_1" value="1 inch Hypoallergenic plaster # 1">
+									1 inch Hypoallergenic plaster # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="velcro_elastic_bondage_4_inches_2" value="Velcro Elastic Bondage 4 inches # 2">
+									Velcro Elastic Bondage 4 inches # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="velcro_elastic_bondage_6_inches_2" value="Velcro Elastic Bondage 6 inches # 2">
+									Velcro Elastic Bondage 6 inches # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="hydrogen_peroxide_50_ml_bot_1" value="Hydrogen Peroxide 50 ml bot # 1">
+									Hydrogen Peroxide 50 ml bot # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="tenpercent_betadine_soln_10_ml_bot_1" value="10% Betadine Soln 10 ml bot # 1">
+									10% Betadine Soln 10 ml bot # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="pnss_1l_bot_1" value="PNSS 1L bot # 1">
+									PNSS 1L bot # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="cutasep_f_50ml_bot_1" value="Cutasep F 50ml bot #1">
+									Cutasep F 50ml bot #1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="cutasep_f_250ml_bot_1" value="Cutasep F 250ml bot # 1">
+									Cutasep F 250ml bot # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="prontosan_wound_irrigation_soln_bot_1" value="Prontosan Wound Irrigation Soln bot # 1">
+									Prontosan Wound Irrigation Soln bot # 1<br>
+								</label><br>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="intrasite_gel_1" value="Intrasite gel #1">
+									Intrasite gel #1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="iodosorb_powder_1" value="Iodosorb powder # 1">
+									Iodosorb powder # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="iodosorb_gel_1" value="Iodosorb gel # 1">
+									Iodosorb gel # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="mebo_gel_1" value="Mebo gel # 1">
+									Mebo gel # 1<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="acticoat_dressing_3" value="Acticoat dressing # 3">
+									Acticoat dressing # 3<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="allevyn_dressing_3" value="Allevyn dressing # 3">
+									Allevyn dressing # 3<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="bactigrass_2" value="Bactigrass # 2">
+									Bactigrass # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="mupirocin_(bactroban)_ointment_2" value="Mupirocin(Bactroban) ointment # 2">
+									Mupirocin(Bactroban) ointment # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="silver_sulfadiazine_(flammazine)_cream_2" value="Silver Sulfadiazine(Flammazine) cream # 2">
+									Silver Sulfadiazine(Flammazine) cream # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="opsite_post_op_6cm_2" value="Opsite post-op dressing 6cm # 2">
+									Opsite post-op dressing 6cm # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="opsite_post_op_10cm_2" value="Opsite post-op dressing 10cm # 2">
+									Opsite post-op dressing 10cm # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="opsite_post_op_15cm_2" value="Opsite post-op dressing 15cm # 2">
+									Opsite post-op dressing 15cm # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="opsite_post_op_20cm_2" value="Opsite post-op dressing 20cm # 2">
+									Opsite post-op dressing 20cm # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="opsite_post_op_25cm_2" value="Opsite post-op dressing 25cm # 2">
+									Opsite post-op dressing 25cm # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="opsite_post_op_30cm_2" value="Opsite post-op dressing 30cm # 2">
+									Opsite post-op dressing 30cm # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="aquacel_ag_dressing_2" value="Aquacel Ag dressing # 2">
+									Aquacel Ag dressing # 2<br>
+								</label><br>
+								<label style="color: black;"> 
+									<input type="checkbox" name="kaltostat_dressing_2" value="Kaltostat dressing # 2">
+									Kaltostat dressing # 2<br>
 								</label><br>
 							</div>
 						</div>
 					</div>
+					{{--  --}}
+				</div>
+				<div class="col-md-12" align="center">
+					<p title="description">Review all the selected check box before submitting.</p>
+					<button class="btn btn-md btn-danger">SUBMIT</button>
+				</div>
+			</form>
+		</div>
+		<hr>
+		<div class="container">
+			<div class="row">
+				<h3 title="title" align="center">MEDICATIONS</h3>
+				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
+			</div>
+			<form action="/castingmaterials/{{$dates->id}}" method="post">
+			{{ csrf_field() }}
+				<h4 class="title" align="center">Casting Materials</h4>
+				<div class="col-md-12 col-md-offset-2 col-sm-12">
+				{{-- DRESSING MATERIALS --}}
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="three_inch_long_bone_fiber_cast_1" value="3 inch Long Bone fiber cast # 1">
+								3 inch Long Bone fiber cast # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="three_inch_long_bone_fiber_cast_2" value="3 inch Long Bone fiber cast # 2">
+								3 inch Long Bone fiber cast # 2<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="four_inch_long_bone_fiber_cast_1" value="4 inch Long Bone fiber cast # 1">
+								4 inch Long Bone fiber cast # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="four_inch_long_bone_fiber_cast_2" value="4 inch Long Bone fiber cast # 2">
+								4 inch Long Bone fiber cast # 2<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="five_inch_long_bone_fiber_cast_1" value="5 inch Long Bone fiber cast # 1">
+								5 inch Long Bone fiber cast # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="five_inch_long_bone_fiber_cast_2" value="5 inch Long Bone fiber cast # 2">
+								5 inch Long Bone fiber cast # 2<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="four_inch_long_bone_fiber_splint_1" value="4 inch Long Bone fiber splint # 1">
+								4 inch Long Bone fiber splint # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="five_inch_long_bone_fiber_splint_1" value="5 inch Long Bone fiber splint # 1">
+								5 inch Long Bone fiber splint # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="three_inch_primecast_fiber_cast_1" value="3 inch PrimeCast fiber cast # 1">
+								3 inch PrimeCast fiber cast # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="three_inch_primecast_fiber_cast_2" value="3 inch PrimeCast fiber cast # 2">
+								3 inch PrimeCast fiber cast # 2<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="four_inch_primecast_fiber_cast_1" value="4 inch PrimeCast fiber cast # 1">
+								4 inch PrimeCast fiber cast # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="four_inch_primecast_fiber_cast_2" value="4 inch PrimeCast fiber cast # 2">
+								4 inch PrimeCast fiber cast # 2<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="five_inch_primecast_fiber_cast_1" value="5 inch PrimeCast fiber cast # 1">
+								5 inch PrimeCast fiber cast # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="five_inch_primecast_fiber_cast_2" value="5 inch PrimeCast fiber cast # 2">
+								5 inch PrimeCast fiber cast # 2<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="four_inch_primecast_fiber_splint_1" value="4 inch PrimeCast fiber splint # 1">
+								4 inch PrimeCast fiber splint # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="five_inch_primecast_fiber_splint_1" value="5 inch PrimeCast fiber splint # 1">
+								5 inch PrimeCast fiber splint # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="stockinet_2_inches_1_yard" value="Stockinet 2 inches 1 yard # 1">
+								Stockinet 2 inches 1 yard # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="stockinet_3_inches_1_yard" value="Stockinet 3 inches 1 yard # 1">
+								Stockinet 3 inches 1 yard # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="stockinet_4_inches_1_yard" value="Stockinet 4 inches 1 yard # 1">
+								Stockinet 4 inches 1 yard # 1<br>
+								</label><br>
+							</div>
+						</div>
+
+					<div class="col-md-6 col-sm-6">
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="stockinet_5_inches_1_yard" value="Stockinet 5 inches 1 yard # 1">
+							Stockinet 5 inches 1 yard # 1<br>	
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="velcro_elastic_bondage_2_inches_1" value="Velcro elastic bondage 2 inches # 1">
+							Velcro elastic bondage 2 inches # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="velcro_elastic_bondage_2_inches_2" value="Velcro elastic bondage 2 inches # 2">
+							Velcro elastic bondage 2 inches # 2<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="velcro_elastic_bondage_3_inches_1" value="Velcro elastic bondage 3 inches # 1">
+							Velcro elastic bondage 3 inches # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="velcro_elastic_bondage_3_inches_2" value="Velcro elastic bondage 3 inches # 2">
+							Velcro elastic bondage 3 inches # 2<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="velcro_elastic_bondage_4_inches_1" value="Velcro elastic bondage 4 inches # 1">
+							Velcro elastic bondage 4 inches # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="velcro_elastic_bondage_4_inches_2" value="Velcro elastic bondage 4 inches # 2">
+							Velcro elastic bondage 4 inches # 2<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="velcro_elastic_bondage_5_inches_1" value="Velcro elastic bondage 5 inches # 1">
+							Velcro elastic bondage 5 inches # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="velcro_elastic_bondage_5_inches_2" value="Velcro elastic bondage 5 inches # 2">
+							Velcro elastic bondage 5 inches # 2<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="primecast_wadding_sheet_4_inches_1" value="PrimeCast Wadding sheet 4 inches # 1">
+							PrimeCast Wadding sheet 4 inches # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="primecast_wadding_sheet_4_inches_2" value="PrimeCast Wadding sheet 4 inches # 2">
+							PrimeCast Wadding sheet 4 inches # 2<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="primecast_wadding_sheet_6_inches_1" value="PrimeCast Wadding sheet 6 inches # 1">
+							PrimeCast Wadding sheet 6 inches # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="primecast_wadding_sheet_6_inches_2" value="PrimeCast Wadding sheet 6 inches # 2">
+							PrimeCast Wadding sheet 6 inches # 2<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="long_bone_armsling_small_size_1" value="Long bone Armsling kiddie size # 1">
+							Long bone Armsling kiddie size # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="long_bone_armsling_medium_size_1" value="Long bone Armsling small size # 1">
+							Long bone Armsling small size # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="long_bone_armsling_large_size_1" value="Long bone Armsling medium size # 1">
+							Long bone Armsling medium size # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="long_bone_armsling_xl_size_1" value="Long bone Armsling Large size # 1">
+							Long bone Armsling Large size # 1<br>
+							</label><br>
+						</div>
+						<div class="checkbox">
+							<label style="color: black;"> 
+								<input type="checkbox" name="long_bone_armsling_kiddie_size_1" value="Long bone Armsling X-L size # 1">
+							Long bone Armsling X-L size # 1<br>
+							</label><br>
+						</div>
+					</div>
+				</div>
 					{{--  --}}
 				</div>
 				<div class="col-md-12" align="center">
@@ -1812,7 +2246,7 @@
 				<h3 title="title" align="center">MEDICATIONS</h3>
 				<p title="description" align="center">Check <strong style="color: red;">ONLY</strong> the required input box below.</p>	
 			</div>
-			<form action="#" method="post">
+			<form action="/orthopedicsprotheses/{{$dates->id}}" method="post">
 			{{ csrf_field() }}
 				<h4 class="title" align="center">Orthopedics/Protheses</h4>
 				<div class="col-md-12 col-md-offset-2 col-sm-12">
@@ -1821,8 +2255,167 @@
 						<div class="col-md-6 col-sm-6">
 							<div class="checkbox">
 								<label style="color: black;"> 
-									<input type="checkbox" name="" value="">
-									
+									<input type="checkbox" name="soft_collar_small_1" value="Soft collar small # 1">
+								Soft collar small # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="soft_collar_medium_1" value="Hard Collar small # 1">
+								Hard Collar small # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="soft_collar_large_1" value="Soft collar medium # 1">
+								Soft collar medium # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="hard_collar_small_1" value="Hard Collar medium # 1">
+								Hard Collar medium # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="hard_collar_medium_1" value="Soft collar large # 1">
+								Soft collar large # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="hard_collar_large_1" value="Hard Collar large # 1">
+								Hard Collar large # 1<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="four_foster_brace" value="Four Foster Brace">
+								Four Foster Brace<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="halo_vest" value="Halo vest">
+								Halo vest<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="jewett_brace" value="Jewett Brace">
+								Jewett Brace<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="knight_taylor_brace" value="Knight-Taylor Brace">
+								Knight-Taylor Brace<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="chairback_low_taylor_brace" value="Chairback/Low-Taylor Brace">
+								Chairback/Low-Taylor Brace<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="milwaukee_brace" value="Milwaukee Brace">
+								Milwaukee Brace<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="shoulder_compression_sleeve" value="Shoulder Compression Sleeve">
+								Shoulder Compression Sleeve<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="humeral_fracture_brace" value="Humeral Fracture Brace">
+								Humeral Fracture Brace<br>
+								</label><br>
+							</div>
+						</div>
+
+						<div class="col-md-6 col-sm-6">
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="elbow_compression_sleeve" value="Elbow Compression sleeve">
+								Elbow Compression sleeve<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="static_wrist_splint" value="Static wrist splint">
+								Static wrist splint<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="wrist_compression_sleeve" value="Wrist compression sleeve">
+								Wrist compression sleeve<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="ischial_weight_bearing_brace" value="Ischial Weight Bearing Brace">
+								Ischial Weight Bearing Brace<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="knee_compression_sleeve" value="Knee Compression sleeve">
+								Knee Compression sleeve<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="knee_hinge_brace" value="Knee Hinge Brace">
+								Knee Hinge Brace<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="knee_immobilizer" value="Knee Immobilizer">
+								Knee Immobilizer<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="patellar_tendon_strap" value="Patellar Tendon Strap">
+								Patellar Tendon Strap<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="ankle_compression_sleeve" value="Ankle Compression sleeve">
+								Ankle Compression sleeve<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="walker_boots" value="Walker boots">
+								Walker boots<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="compression_foot_sleeve" value="Compression Foot Sleeve">
+								Compression Foot Sleeve<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="silicon_insole_medial_arch_support" value="Silicone insole medial arch support">
+								Silicone insole medial arch support<br>
+								</label><br>
+							</div>
+							<div class="checkbox">
+								<label style="color: black;"> 
+									<input type="checkbox" name="backjoy_sitsmart_posture_plus_travelclub" value="Backjoy sitsmart posture plus(Travel Club)">
+								Backjoy sitsmart posture plus(Travel Club)<br>
 								</label><br>
 							</div>
 						</div>

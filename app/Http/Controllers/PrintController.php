@@ -596,14 +596,14 @@ class PrintController extends Controller
         $result_refampicin200_tsp = $request->input('refampicin200_tsp');
         $refampicin200_tsp = explode('|', $result_refampicin200_tsp);
 
-        $result = $arrayName = array($zegen500, $unasyn625, $co-amoxiclav625, $cloxicillin500_28, $cloxicillin500_56, $cloxacillin250, $cloxacillin125, $cefuroxime_zegen250, $cefuroxime_zegen500, $cefuroxime250, $cefuroxime125, $levofloxacin750, $levofloxacin750_14, $fluconazole150, $levox500, $ciprobay1000, $myrin-p_forte120, $myrin-p_forte90, $myrin120, $marin90, $refampicin300, $refampicin200_tbsp, $refampicin200_tsp, );
+        $result = $arrayName = array($zegen500, $unasyn625, $co_amoxiclav625, $cloxicillin500_28, $cloxicillin500_56, $cloxacillin250, $cloxacillin125, $cefuroxime_zegen250, $cefuroxime_zegen500, $cefuroxime250, $cefuroxime125, $levofloxacin750, $levofloxacin750_14, $fluconazole150, $levox500, $ciprobay1000, $myrin_p_forte120, $myrin_p_forte90, $myrin120, $marin90, $refampicin300, $refampicin200_tbsp, $refampicin200_tsp, );
         // end of Antimicrobial Medications
 
         array_filter($result, function($v){return!empty($v);});
         $array = array_map('array_filter', $result);
         $antimicrobials = array_filter($array, function($x){ return!empty($x);});
 
-        $pdf = PDF::loadView('print.antimicrobial', compact('antimicrobials', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        $pdf = PDF::loadView('print.antimicrobials', compact('antimicrobials', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
         return $pdf->stream('Prescription_antimicrobial_request.pdf');
     }
 
@@ -649,13 +649,12 @@ class PrintController extends Controller
 
         $result = $arrayName = array($diprospan1_1, $diprospan1_2, $teriparatide_forteo, $zolendronic_acid_osteomet4, $hyruan_plus2, $high_hyal_plus2, $d50_glucose, $lidocaine2_1, $lidocaine2_2, $syringe_1_cc, $syringe_5_cc, $syringe_10_cc, );
         // end of injectables
-
-        array_filter($result, function($v){return!empty($v);});
-        $array = array_map('array_filter', $result);
-        $injectables = array_filter($array, function($x){ return!empty($x);});
-
-        $pdf = PDF::loadView('print.injectables', compact('injectables', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Prescription_injectables_request.pdf');
+        dd($result);
+        // array_filter($result, function($v){return!empty($v);});
+        // $array = array_map('array_filter', $result);
+        // $injectables = array_filter($array, function($x){ return!empty($x);});
+        // $pdf = PDF::loadView('print.injectables', compact('injectables', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        // return $pdf->stream('Prescription_injectables_request.pdf');
     }
 
     public function dressing(Request $request, $id){
@@ -729,6 +728,7 @@ class PrintController extends Controller
         $five_inch_primecast_fiber_cast_2 = $request->input('five_inch_primecast_fiber_cast_2');
         $four_inch_primecast_fiber_splint_1 = $request->input('four_inch_primecast_fiber_splint_1');
         $five_inch_primecast_fiber_splint_1 = $request->input('five_inch_primecast_fiber_splint_1');
+        $Stockinet_2_inches_1_yard = $request->input('Stockinet_2_inches_1_yard');
         $stockinet_3_inches_1_yard = $request->input('stockinet_3_inches_1_yard');
         $stockinet_4_inches_1_yard = $request->input('stockinet_4_inches_1_yard');
         $stockinet_5_inches_1_yard = $request->input('stockinet_5_inches_1_yard');
@@ -750,7 +750,7 @@ class PrintController extends Controller
         $long_bone_armsling_xl_size_1 = $request->input('long_bone_armsling_xl_size_1');
         $long_bone_armsling_kiddie_size_1 = $request->input('long_bone_armsling_kiddie_size_1');
 
-        $result = array($three_inch_long_bone_fiber_cast_1, $three_inch_long_bone_fiber_cast_2, $four_inch_long_bone_fiber_cast_1 ,$four_inch_long_bone_fiber_cast_2, $five_inch_long_bone_fiber_cast_1 ,$five_inch_long_bone_fiber_cast_2, $four_inch_long_bone_fiber_splint_1, $five_inch_long_bone_fiber_splint_1, $three_inch_primecast_fiber_cast_1, $three_inch_primecast_fiber_cast_2, $four_inch_primecast_fiber_cast_1, $four_inch_primecast_fiber_cast_2, $five_inch_primecast_fiber_cast_1, $five_inch_primecast_fiber_cast_2, $four_inch_primecast_fiber_splint_1, $five_inch_primecast_fiber_splint_1, $stockinet_3_inches_1_yard, $stockinet_4_inches_1_yard, $stockinet_5_inches_1_yard, $velcro_elastic_bondage_2_inches_1, $velcro_elastic_bondage_2_inches_2, $velcro_elastic_bondage_3_inches_1, $velcro_elastic_bondage_3_inches_2, $velcro_elastic_bondage_4_inches_1, $velcro_elastic_bondage_4_inches_2, $velcro_elastic_bondage_5_inches_1, $velcro_elastic_bondage_5_inches_2, $primecast_wadding_sheet_4_inches_1, $primecast_wadding_sheet_4_inches_2, $primecast_wadding_sheet_6_inches_1, $primecast_wadding_sheet_6_inches_2, $long_bone_armsling_small_size_1, $long_bone_armsling_medium_size_1, $long_bone_armsling_large_size_1, $long_bone_armsling_xl_size_1, $long_bone_armsling_kiddie_size_1, );
+        $result = array($three_inch_long_bone_fiber_cast_1, $three_inch_long_bone_fiber_cast_2, $four_inch_long_bone_fiber_cast_1 ,$four_inch_long_bone_fiber_cast_2, $five_inch_long_bone_fiber_cast_1 ,$five_inch_long_bone_fiber_cast_2, $four_inch_long_bone_fiber_splint_1, $five_inch_long_bone_fiber_splint_1, $three_inch_primecast_fiber_cast_1, $three_inch_primecast_fiber_cast_2, $four_inch_primecast_fiber_cast_1, $four_inch_primecast_fiber_cast_2, $five_inch_primecast_fiber_cast_1, $five_inch_primecast_fiber_cast_2, $four_inch_primecast_fiber_splint_1, $five_inch_primecast_fiber_splint_1, $Stockinet_2_inches_1_yard, $stockinet_3_inches_1_yard, $stockinet_4_inches_1_yard, $stockinet_5_inches_1_yard, $velcro_elastic_bondage_2_inches_1, $velcro_elastic_bondage_2_inches_2, $velcro_elastic_bondage_3_inches_1, $velcro_elastic_bondage_3_inches_2, $velcro_elastic_bondage_4_inches_1, $velcro_elastic_bondage_4_inches_2, $velcro_elastic_bondage_5_inches_1, $velcro_elastic_bondage_5_inches_2, $primecast_wadding_sheet_4_inches_1, $primecast_wadding_sheet_4_inches_2, $primecast_wadding_sheet_6_inches_1, $primecast_wadding_sheet_6_inches_2, $long_bone_armsling_small_size_1, $long_bone_armsling_medium_size_1, $long_bone_armsling_large_size_1, $long_bone_armsling_xl_size_1, $long_bone_armsling_kiddie_size_1, );
 
         array_filter($result, function($v){return!empty($v);});
         $array = array_map('array_filter', $result);
