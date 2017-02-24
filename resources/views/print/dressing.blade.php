@@ -6,7 +6,7 @@ span.cls_002{font-family:"Calibri Bold",serif;font-size:15.0px;color:rgb(0,0,0);
 div.cls_002{font-family:"Calibri Bold",serif;font-size:15.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
 span.cls_003{font-family:"Calibri Bold",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
 div.cls_003{font-family:"Calibri Bold",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
-span.cls_004{font-family:"Calibri",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_004{font-famly:"Calibri",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 div.cls_004{font-family:"Calibri",serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 span.cls_005{font-family:"Calibri",serif;font-size:5.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
 div.cls_005{font-family:"Calibri",serif;font-size:5.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
@@ -53,15 +53,13 @@ div.cls_010{font-family:"Calibri",serif;font-size:14.1px;color:rgb(0,0,0);font-w
 <div style="position:absolute;left:108.01px;top:242.29px" class="cls_006"><span class="cls_006"><strong>Age:</strong> <u>{{$dates->patients->age}}</u></span></div>
 <div style="position:absolute;left:36.00px;top:255.49px" class="cls_006"><span class="cls_006"><strong>Address:</strong> {{$dates->patients->address}}</span></div>
 <div style="position:absolute;left:72.00px;top:360.85px" class="cls_006"><span class="cls_006">
-	<div class="container" style="width: 330px; height: 245px;">
+	<div class="container" style="width: 330px;">
 		<table>
 			<tbody>
-				@foreach($dressings as $info)
-					@foreach($info as $data)
-						<tr>
-							<td style="font-size: 12px; padding-top: -25px; padding-left: 35px; padding-bottom: 28px;">{{$data}}</td>
-						</tr>
-					@endforeach
+				@foreach($dressings as $data)
+					<tr>
+						<td style="font-size: 12px; padding-top: -25px; padding-left: 35px; padding-bottom: 28px;"><i>{{$data}}</i></td>
+					</tr>
 				@endforeach
 			</tbody>
 		</table>

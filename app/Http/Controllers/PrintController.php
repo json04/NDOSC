@@ -635,26 +635,32 @@ class PrintController extends Controller
         $result_high_hyal_plus2 = $request->input('high_hyal_plus2');
         $high_hyal_plus2 = explode('|', $result_high_hyal_plus2);
 
-        $d50_glucose = $request->input('d50_glucose');
+        $result_d50_glucose = $request->input('d50_glucose');
+        $d50_glucose = explode('|', $result_d50_glucose);
 
-        $lidocaine2_1 = $request->input('lidocaine2_1');
+        $result_lidocaine2_1 = $request->input('lidocaine2_1');
+        $lidocaine2_1 = explode('|', $result_lidocaine2_1);
 
-        $lidocaine2_2 = $request->input('lidocaine2_2');
+        $result_lidocaine2_2 = $request->input('lidocaine2_2');
+        $lidocaine2_2 = explode('|', $result_lidocaine2_2);
 
-        $syringe_1_cc = $request->input('1_cc_syringe');
+        $result_syringe_1_cc = $request->input('1_cc_syringe');
+        $syringe_1_cc = explode('|', $result_syringe_1_cc);
 
-        $syringe_5_cc = $request->input('5_cc_syringe');
+        $result_syringe_5_cc = $request->input('5_cc_syringe');
+        $syringe_5_cc = explode('|', $result_syringe_5_cc);
 
-        $syringe_10_cc = $request->input('10_cc_syringe');
+        $result_syringe_10_cc = $request->input('10_cc_syringe');
+        $syringe_10_cc = explode('|', $result_syringe_10_cc);
 
         $result = $arrayName = array($diprospan1_1, $diprospan1_2, $teriparatide_forteo, $zolendronic_acid_osteomet4, $hyruan_plus2, $high_hyal_plus2, $d50_glucose, $lidocaine2_1, $lidocaine2_2, $syringe_1_cc, $syringe_5_cc, $syringe_10_cc, );
         // end of injectables
-        dd($result);
-        // array_filter($result, function($v){return!empty($v);});
-        // $array = array_map('array_filter', $result);
-        // $injectables = array_filter($array, function($x){ return!empty($x);});
-        // $pdf = PDF::loadView('print.injectables', compact('injectables', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        // return $pdf->stream('Prescription_injectables_request.pdf');
+
+        array_filter($result, function($v){return!empty($v);});
+        $array = array_map('array_filter', $result);
+        $injectables = array_filter($array, function($x){ return!empty($x);});
+        $pdf = PDF::loadView('print.injectables', compact('injectables', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        return $pdf->stream('Prescription_injectables_request.pdf');
     }
 
     public function dressing(Request $request, $id){
@@ -696,12 +702,12 @@ class PrintController extends Controller
         $aquacel_ag_dressing_2 = $request->input('aquacel_ag_dressing_2');
         $kaltostat_dressing_2 = $request->input('kaltostat_dressing_2');
 
-        $result = array($syringe_1_cc, $syringe_5_cc, $syringe_10_cc, $sterile_gauze_pads_10, $sterile_gauze_pads_20, $sterile_gauze_pads_30, $working_globes_box_1, $one_inch_hypoallergenic_plaster_1, $velcro_elastic_bondage_4_inches_2, $velcro_elastic_bondage_6_inches_2, $hydrogen_peroxide_50_ml_bot_1, $tenpercent_betadine_soln_10_ml_bot_1, $pnss_1l_bot_1, $cutasep_f_50ml_bot_1, $cutasep_f_250ml_bot_1, $prontosan_wound_irrigation_soln_bot_1, $intrasite_gel_1, $iodosorb_powder_1, $iodosorb_gel_1, $mebo_gel_1, $acticoat_dressing_3, $allevyn_dressing_3, $bactigrass_2, $mupirocin_bactroban_ointment_2, $silver_sulfadiazine_flammazine_cream_2, $opsite_post_op_6cm_2, $opsite_post_op_10cm_2, $opsite_post_op_15cm_2, $opsite_post_op_20cm_2, $opsite_post_op_25cm_2, $opsite_post_op_30cm_2, $aquacel_ag_dressing_2, );
+        $result = array($syringe_1_cc, $syringe_5_cc, $syringe_10_cc, $sterile_gauze_pads_10, $sterile_gauze_pads_20, $sterile_gauze_pads_30, $working_globes_box_1, $one_inch_hypoallergenic_plaster_1, $velcro_elastic_bondage_4_inches_2, $velcro_elastic_bondage_6_inches_2, $hydrogen_peroxide_50_ml_bot_1, $tenpercent_betadine_soln_10_ml_bot_1, $pnss_1l_bot_1, $cutasep_f_50ml_bot_1, $cutasep_f_250ml_bot_1, $prontosan_wound_irrigation_soln_bot_1, $intrasite_gel_1, $iodosorb_powder_1, $iodosorb_gel_1, $mebo_gel_1, $acticoat_dressing_3, $allevyn_dressing_3, $bactigrass_2, $mupirocin_bactroban_ointment_2, $silver_sulfadiazine_flammazine_cream_2, $opsite_post_op_6cm_2, $opsite_post_op_10cm_2, $opsite_post_op_15cm_2, $opsite_post_op_20cm_2, $opsite_post_op_25cm_2, $opsite_post_op_30cm_2, $aquacel_ag_dressing_2, $kaltostat_dressing_2, );
 
-        array_filter($result, function($v){return!empty($v);});
-        $array = array_map('array_filter', $result);
-        $dressings = array_filter($array, function($x){ return!empty($x);});
-
+        $dressings = array_filter($result, function($v){return!empty($v);});
+        // $array = array_map('array_filter', $result);
+        // $dressings = array_filter($array, function($x){ return!empty($x);});
+        // dd($dressings);
         $pdf = PDF::loadView('print.dressing', compact('dressings', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
         return $pdf->stream('Prescription_dressing_request.pdf');
         
@@ -752,9 +758,7 @@ class PrintController extends Controller
 
         $result = array($three_inch_long_bone_fiber_cast_1, $three_inch_long_bone_fiber_cast_2, $four_inch_long_bone_fiber_cast_1 ,$four_inch_long_bone_fiber_cast_2, $five_inch_long_bone_fiber_cast_1 ,$five_inch_long_bone_fiber_cast_2, $four_inch_long_bone_fiber_splint_1, $five_inch_long_bone_fiber_splint_1, $three_inch_primecast_fiber_cast_1, $three_inch_primecast_fiber_cast_2, $four_inch_primecast_fiber_cast_1, $four_inch_primecast_fiber_cast_2, $five_inch_primecast_fiber_cast_1, $five_inch_primecast_fiber_cast_2, $four_inch_primecast_fiber_splint_1, $five_inch_primecast_fiber_splint_1, $Stockinet_2_inches_1_yard, $stockinet_3_inches_1_yard, $stockinet_4_inches_1_yard, $stockinet_5_inches_1_yard, $velcro_elastic_bondage_2_inches_1, $velcro_elastic_bondage_2_inches_2, $velcro_elastic_bondage_3_inches_1, $velcro_elastic_bondage_3_inches_2, $velcro_elastic_bondage_4_inches_1, $velcro_elastic_bondage_4_inches_2, $velcro_elastic_bondage_5_inches_1, $velcro_elastic_bondage_5_inches_2, $primecast_wadding_sheet_4_inches_1, $primecast_wadding_sheet_4_inches_2, $primecast_wadding_sheet_6_inches_1, $primecast_wadding_sheet_6_inches_2, $long_bone_armsling_small_size_1, $long_bone_armsling_medium_size_1, $long_bone_armsling_large_size_1, $long_bone_armsling_xl_size_1, $long_bone_armsling_kiddie_size_1, );
 
-        array_filter($result, function($v){return!empty($v);});
-        $array = array_map('array_filter', $result);
-        $castingmaterials = array_filter($array, function($x){ return!empty($x);});
+        $castingmaterials = array_filter($result, function($x){ return!empty($x);});
 
         $pdf = PDF::loadView('print.castingmaterials', compact('castingmaterials', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
         return $pdf->stream('Prescription_casting_materials_request.pdf');
@@ -796,11 +800,9 @@ class PrintController extends Controller
 
         $result = array($soft_collar_small_1, $soft_collar_medium_1, $soft_collar_large_1, $hard_collar_small_1, $hard_collar_medium_1, $hard_collar_large_1, $four_foster_brace, $halo_vest, $jewett_brace, $knight_taylor_brace, $chairback_low_taylor_brace, $milwaukee_brace, $shoulder_compression_sleeve, $humeral_fracture_brace, $elbow_compression_sleeve, $static_wrist_splint, $wrist_compression_sleeve, $ischial_weight_bearing_brace, $knee_compression_sleeve, $knee_hinge_brace, $knee_immobilizer, $patellar_tendon_strap, $ankle_compression_sleeve, $walker_boots, $compression_foot_sleeve, $silicon_insole_medial_arch_support, $backjoy_sitsmart_posture_plus_travelclub, );
 
-        array_filter($result, function($v){return!empty($v);});
-        $array = array_map('array_filter', $result);
-        $orthopedicsprotheses = array_filter($array, function($x){ return!empty($x);});
+        $orthopros = array_filter($result, function($x){ return!empty($x);});
 
-        $pdf = PDF::loadView('print.orthopedicsprotheses', compact('orthopedicprotheses', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        $pdf = PDF::loadView('print.orthopedicsprotheses', compact('orthopros', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
         return $pdf->stream('Prescription_orthopedic_protheses_request.pdf');
 
     }

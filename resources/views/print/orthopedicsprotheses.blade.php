@@ -56,12 +56,10 @@ div.cls_010{font-family:"Calibri",serif;font-size:14.1px;color:rgb(0,0,0);font-w
 	<div class="container" style="width: 330px; height: 245px;">
 		<table>
 			<tbody>
-				@foreach($orthopedicsprotheses as $info)
-					@foreach($info as $data)
-						<tr>
-							<td style="font-size: 12px; padding-top: -25px; padding-left: 35px; padding-bottom: 28px;">{{$data}}</td>
-						</tr>
-					@endforeach
+				@foreach($orthopros as $info)
+					<tr>
+						<td style="font-size: 10px; padding-top: -25px; padding-left: 35px; padding-bottom: 28px;"><i>{{$info}}</i></td>
+					</tr>
 				@endforeach
 			</tbody>
 		</table>
