@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::post('/referralPrint/{id}', 'PrintController@referralPrint');
 	Route::get('/admissionView/{id}', 'PrintController@admissionView');
 	Route::post('/admissionPrint/{id}', 'PrintController@admissionPrint');
+	Route::get('/medcertview/{id}', 'PrintController@medcertview');
 	Route::post('/relaxant/{id}', 'PrintController@relaxant');
 	Route::post('/antimicrobials/{id}', 'PrintController@antimicrobial');
 	Route::post('/miscsupplement/{id}', 'PrintController@miscsupplement');

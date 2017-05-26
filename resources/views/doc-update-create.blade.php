@@ -64,7 +64,7 @@
 					<div class="card card-signup">
 						<div class="content">
 							<h5 class="title">Subjective</h5>
-							<p>{{ $subjectives->subjective }}</p>
+							<p>{!! $subjectives->subjective !!}</p>
 						</div>
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 					<div class="card card-signup">
 						<div class="content">
 							<h5 class="title">Objective</h5>
-							<p>{{ $objectives->objective }}</p>
+							<p>{!! $objectives->objective !!}</p>
 						</div>
 					</div>
 				</div>
@@ -80,7 +80,7 @@
 					<div class="card card-signup">
 						<div class="content">
 							<h5 class="title">Assessment</h5>
-							<p>{{ $assessments->assessment }}</p>
+							<p>{!! $assessments->assessment !!}</p>
 						</div>
 					</div>
 				</div>
@@ -88,7 +88,7 @@
 					<div class="card card-signup">
 						<div class="content">
 							<h5 class="title">Plan</h5>
-							<p>{{ $plans->plan }}</p>
+							<p>{!! $plans->plan !!}</p>
 						</div>
 					</div>
 				</div>
@@ -172,7 +172,7 @@
 						<div class="card card-signup" align="center">
 							<div class="content">
 								<h5 align="left" class="title">Consultation Date</h5>
-								<input class="form-control" type="date" name="date" required/>
+								<input type="date" name="date" class="form-control" required/>
 							</div>
 						</div>
 					</div>
@@ -182,7 +182,7 @@
 						<div class="card card-signup">
 							<div class="content">
 								<h5 class="title">Subjective Complain</h5>
-								<textarea class="form-control" placeholder="Type your information here" name="subjective" rows="5"></textarea>
+								<textarea class="form-control" placeholder="Type your information here" name="subjective" rows="10"></textarea>
 							</div>
 						</div>
 					</div>
@@ -190,7 +190,7 @@
 						<div class="card card-signup">
 							<div class="content">
 								<h5 class="title" align="left">Objective or Findings</h5>
-								<textarea class="form-control" placeholder="Type your information here" name="objective" rows="5"></textarea>
+								<textarea class="form-control" placeholder="Type your information here" name="objective" rows="10"></textarea>
 							</div>
 						</div>
 					</div>
@@ -198,7 +198,7 @@
 						<div class="card card-signup">
 							<div class="content">
 								<h5 class="title" align="left">Assessment</h5>
-								<textarea class="form-control" placeholder="Type your information here" name="assessment" rows="5"></textarea>
+								<textarea class="form-control" placeholder="Type your information here" name="assessment" rows="10"></textarea>
 							</div>
 						</div>
 					</div>
@@ -206,7 +206,7 @@
 						<div class="card card-signup">
 							<div class="content">
 								<h5 class="title" align="left">Plan</h5>
-								<textarea class="form-control" placeholder="Type your information here" name="plan" rows="5"></textarea>
+								<textarea class="form-control" placeholder="Type your information here" name="plan" rows="10"></textarea>
 							</div>
 						</div>
 					</div>

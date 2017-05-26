@@ -820,6 +820,17 @@ class PrintController extends Controller
         // $plan = Plan::findOrFail($id);
         // echo $dates.$patients->lastname.$subjectives->subjective;
     }
+
+    public function medcertview($id){
+        $dates = Date::findOrFail($id);
+        $patients = Patient::findOrFail($dates->patients_id);
+        $subjectives = Subjective::findOrFail($id);
+        $objectives = Objective::findOrFail($id);
+        $assessments = Assessment::findOrFail($id);
+        $plans = Plan::findOrFail($id);
+        return view('medcert', compact('dates', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'));
+    }
+
     public function referralPrint(Request $request, $id){
         $dates = Date::findOrFail($id);
         $patients = Patient::findOrFail($dates->patients_id);

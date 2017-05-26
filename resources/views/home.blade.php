@@ -27,7 +27,7 @@
                                 <td>{{ $info->lastname }}</td>
                                 <td>{{ $info->firstname }}</td>
                                 <td>{{ $info->middlename }}</td> 
-                                <td align="center">{{ $info->assessments->last()['assessment'] }}</td> 
+                                <td align="center">{{ strip_tags($info->assessments->last()['assessment']) }}</td> 
                                 <td align="center"><a href="/update/{{ $info->id }}" class="btn btn-default btn-sm">Update</a><a href="/proceed/{{ $info->id }}" class="btn btn-default btn-sm">Proceed</a></td>   
                             </tr>
                             @endforeach

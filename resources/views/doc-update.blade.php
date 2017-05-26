@@ -28,7 +28,7 @@
                                     <a href="/print/{{ $data->id }}" class="btn btn-default btn-sm">Request</a>
                                     <a href="/admissionView/{{ $data->id }}" class="btn btn-default btn-sm">Admission</a>
                                     <a href="/referralview/{{ $data->id }}" class="btn btn-default btn-sm">Referral</a>
-                                    <a href="/medcertview/" class="btn btn-default btn-sm">Medical Certificate</a>
+                                    <a href="/medcertview/{{ $data->id }}" class="btn btn-default btn-sm">Medical Certificate</a>
                                     <a href="/patientupdate/{{ $data->id }}" class="btn btn-default btn-sm">Update</a>
                                 </td>
                             </tr>

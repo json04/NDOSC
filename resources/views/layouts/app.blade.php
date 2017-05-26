@@ -17,6 +17,7 @@
         <!-- DataTables Responsive -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.material.min.css">
+        <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
 
         <!-- CSS Files -->
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -30,6 +31,14 @@
             window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
             ]); ?>
+        </script>
+        {{-- TinyMCE plugin --}}
+        <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+        <script>
+            tinymce.init({ 
+                selector:'textarea', 
+                plugins: 'lists'
+            });
         </script>
     </head>
     <body>
@@ -100,7 +109,6 @@
         </footer> 
     </body>
     <!--   Core JS Files   -->
-    <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/material.min.js') }}"></script>
 

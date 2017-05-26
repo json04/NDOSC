@@ -122,7 +122,7 @@
 						<div class="card card-signup">
 							<div class="content">
 								<h5 class="title">Subjective</h5>
-								<textarea class="form-control" placeholder="Type your information here" name="subjective" rows="5"></textarea>
+								<textarea class="form-control" id="subjectiveText" placeholder="Type your information here" name="subjective" rows="10"></textarea>
 							</div>
 						</div>
 					</div>
@@ -130,7 +130,7 @@
 						<div class="card card-signup">
 							<div class="content">
 								<h5 class="title" align="left">Objective</h5>
-								<textarea class="form-control" placeholder="Type your information here" name="objective" rows="5"></textarea>
+								<textarea class="form-control" placeholder="Type your information here" name="objective" rows="10"></textarea>
 							</div>
 						</div>
 					</div>
@@ -138,7 +138,7 @@
 						<div class="card card-signup">
 							<div class="content">
 								<h5 class="title" align="left">Assessment</h5>
-								<textarea class="form-control" placeholder="Type your information here" name="assessment" rows="5"></textarea>
+								<textarea class="form-control" placeholder="Type your information here" name="assessment" rows="10"></textarea>
 							</div>
 						</div>
 					</div>
@@ -146,7 +146,7 @@
 						<div class="card card-signup">
 							<div class="content">
 								<h5 class="title" align="left">Plan</h5>
-								<textarea class="form-control" placeholder="Type your information here" name="plan" rows="5"></textarea>
+								<textarea class="form-control" placeholder="Type your information here" name="plan" rows="10"></textarea>
 							</div>
 						</div>
 					</div>
@@ -198,6 +198,12 @@
 			        e.preventDefault(); $(this).parent('div').remove(); x--;
 			    })
 			});
+	</script>
+	<script type="text/javascript">
+		$("subjectiveText").ready(function(){
+			var convert = this.val;
+			convert.replace('text', 'text');
+		});
 	</script>
 	<script type="text/javascript">
 	$(function(){
