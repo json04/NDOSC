@@ -34,6 +34,7 @@
         </script>
         {{-- TinyMCE plugin --}}
         <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+        <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=4on6oygd2yg58c3v6vcbktugkhz8cvz323wsxnftywc63f0x"></script>
         <script>
             tinymce.init({ 
                 selector:'textarea', 
