@@ -40,6 +40,7 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::post('/dressing/{id}', 'PrintController@dressing');
 	Route::post('/castingmaterials/{id}', 'PrintController@castingMaterials');
 	Route::post('/orthopedicsprotheses/{id}', 'PrintController@orthopedicsProstheses');
+	Route::post('/medcertprint/{id}', 'PrintController@medcertPrint');
 });
 
 Route::group(['middleware' => 'admin'], function(){

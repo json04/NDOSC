@@ -831,6 +831,53 @@ class PrintController extends Controller
         return view('medcert', compact('dates', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'));
     }
 
+    public function medcertPrint(Request $request, $id){
+        $dates = Date::findOrFail($id);
+        $patients = Patient::findOrFail($dates->patients_id);
+        $subjectives = Subjective::findOrFail($id);
+        $objectives = Objective::findOrFail($id);
+        $plans = Plan::findOrFail($id);
+        
+        $impression = collect([
+            'assessment' => $request->Input('assessment')
+        ]);
+
+        $dateconsultation = collect([
+            'date' => $request->Input('date')
+        ]);
+        $procedure = collect([
+            'procedure' => $request->Input('procedure')
+        ]);
+
+        $recommendation = collect([
+            'recommendation' => $request->Input('recommendation')
+        ]);
+
+        $toArray = $impression->toArray();
+        $impressions = array_filter($toArray, function($data){
+            return $data != null;
+        });
+
+        $toArray = $dateconsultation->toArray();
+        $dateconsultations = array_filter($toArray, function($data){
+            return $data != null;
+        });
+        $toArray = $procedure->toArray();
+        $procedures = array_filter($toArray, function($data){
+            return $data != null;
+        });
+
+        $toArray = $recommendation->toArray();
+        $recommendations = array_filter($toArray, function($data){
+            return $data != null;
+        });
+
+        // dd($dateconsultations, $procedures, $recommendations);
+
+        $pdf = PDF::loadView('print.medcert', compact('dates', 'impressions', 'dateconsultations', 'procedures', 'recommendations', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'))->setPaper('portrait')->setWarnings(false);
+        return $pdf->stream('Medical-Certificate-Request.pdf');
+    }
+
     public function referralPrint(Request $request, $id){
         $dates = Date::findOrFail($id);
         $patients = Patient::findOrFail($dates->patients_id);

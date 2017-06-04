@@ -65,13 +65,13 @@ div.cls_010{font-family:"Calibri",serif;font-size:14.1px;color:rgb(0,0,0);font-w
 		<p>Referring to you above patient with the following clinical information:</p>
 	</div>
 		<p style="padding-top: -8px; font-size: 8px;"><strong>SUBJECTIVE</strong></p>
-		<ol style="padding-top: -10px; font-size: 8px;" >{{$subjectives->subjective}}</ol>
+		<ol style="padding-top: -10px; font-size: 8px;" >{!!$subjectives->subjective!!}</ol>
 		<p style="padding-top: -3px; font-size: 8px;"><strong>OBJECTIVE</strong></p>
-		<ol style="padding-top: -10px; font-size: 8px;">{{$objectives->objective}}</ol>
+		<ol style="padding-top: -10px; font-size: 8px;">{!!$objectives->objective!!}</ol>
 		<p style="padding-top: -3px; font-size: 8px;"><strong>ASSESSMENT</strong></p>
-		<ol style="padding-top: -10px; font-size: 8px;">{{$assessments->assessment}}</ol>
+		<ol style="padding-top: -10px; font-size: 8px;">{!!$assessments->assessment!!}</ol>
 		<p style="padding-top: -3px; font-size: 8px;"><strong>PlAN</strong></p>
-		<ol style="padding-top: -10px; font-size: 8px;">{{$plans->plan}}</ol>
+		<ol style="padding-top: -10px; font-size: 8px;">{!!$plans->plan!!}</ol>
 		<p style="padding-top: 10px; font-size: 8px;"><strong>NOTE:</strong> <u>@foreach($notes as $note){{$note}}@endforeach</u></p>
 		<p style="padding-top: 0px;">Thank you!</p>
 	</div>

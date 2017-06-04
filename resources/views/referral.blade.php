@@ -18,13 +18,13 @@
 									<p>Dear Dr.&nbsp<input class="form-input" type="text" name="name" size="10">,</p><br>
 									<p>​Referring to you above patient with the following clinical information:</p><br>
 									<p style="margin-bottom: 0px;">SUBJECTIVE:</p>
-									<ul><li>{{$subjectives->subjective}}</li></ul><br>
+									{!!$subjectives->subjective!!}</<br>
 									<p style="margin-bottom: 0px;">OBJECTIVE:</p>
-									<ul><li>{{$objectives->objective}}</li></ul><br>
+									{!!$objectives->objective!!}</<br>
 									<p style="margin-bottom: 0px;">ASSESSMENT:</p>
-									<ul><li>{{$assessments->assessment}}</li></ul><br>
+									{!!$assessments->assessment!!}</<br>
 									<p style="margin-bottom: 0px;">PLAN:</p>
-									<ul><li>{{$plans->plan}}</li></ul><br>
+									{!!$plans->plan!!}</<br>
 									<p>NOTE: &nbsp<input class="form-input" type="text" name="note" size="20"></p><br><br>
 									<p>Thank you!</p><br><br>
 									<p style="margin-bottom: 0px;">________________________</p>
