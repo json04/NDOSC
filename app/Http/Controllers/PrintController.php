@@ -874,8 +874,10 @@ class PrintController extends Controller
 
         // dd($dateconsultations, $procedures, $recommendations);
 
-        $pdf = PDF::loadView('print.medcert', compact('dates', 'impressions', 'dateconsultations', 'procedures', 'recommendations', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'))->setPaper('portrait')->setWarnings(false);
-        return $pdf->stream('Medical-Certificate-Request.pdf');
+        // $pdf = PDF::loadView('print.medcert', compact('dates', 'impressions', 'dateconsultations', 'procedures', 'recommendations', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'))->setPaper('portrait')->setWarnings(false);
+        // return $pdf->stream('Medical-Certificate-Request.pdf');
+        // return PDF::loadFile('http://www.github.com')->inline('github.pdf');
+        return PDF::loadView('print.medcert', compact('dates', 'impressions', 'dateconsultations', 'procedures', 'recommendations', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'))->setPaper('a4')->setOrientation('portrait')->inline('medical.pdf');
     }
 
     public function referralPrint(Request $request, $id){

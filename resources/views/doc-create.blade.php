@@ -112,7 +112,7 @@
 						<div class="card card-signup" align="center">
 							<div class="content">
 								<h5 align="left" class="title">Consultation Date</h5>
-								<input class="form-control" type="date" name="date" required/>
+								<input class="form-control datepicker" type="text" name="date" required/>
 							</div>
 						</div>
 					</div>
