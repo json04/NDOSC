@@ -24,11 +24,22 @@
 									</div>
 								</div>
 								<br>
-								<h5>PROCEDURE DONE:</h5>
-								<input type="text" placeholder="procedure" name="procedure">
-								<br>
-								<h5>RECOMMENDATION:</h5>
-								<input type="text" placeholder="recommendation" name="recommendation">
+								<div class="area">
+									<div class="card card-signup">
+										<div class="content">
+											<h5 class="title" align="left">Procedure</h5>
+											<textarea class="form-control" placeholder="Type your information here" name="procedure" rows="10"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="area">
+									<div class="card card-signup">
+										<div class="content">
+											<h5 class="title" align="left">Recommendation</h5>
+											<textarea class="form-control" placeholder="Type your information here" name="recommendation" rows="10"></textarea>
+										</div>
+									</div>
+								</div>
 								<div class="button-submit" align="center">
 									<button type="submit" class="btn btn-default btn-md">PRINT</button>
 								</div>

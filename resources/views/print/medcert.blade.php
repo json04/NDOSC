@@ -7,15 +7,14 @@
 	body{
     	height: 410mm;
     	width: 297mm;
-    	padding-top: 5em;
+    	padding-top: 2em;
 	}
 	.footer {
 	    position: absolute;
 	    bottom: 0;
 	}
-	.sign {
+	#sign {
 	    position: absolute;
-	    bottom: 0;
 	}
 	#footer{
 		color: grey;
@@ -23,24 +22,42 @@
 </style>
 <body>
 	<div class="container">
-		<div class="col-md-12" align="center">
+		<div class="col-xs-12" align="center">
 			<img src="C:\Users\Jayson\Documents\GitHub\NDOSC\public\img\intrologo.png" height="300" width="940">
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-6" align="right" style="padding-right: 20mm;">
 				<h3>Date:{{$dates->date}}</h3>
-			</div><br><br>
+			</div><br>
 			<div class="col-md-12" align="center">
-				<h1 style="font-size: 40px;">MEDICAL CERTIFICATE</h1>
+				<h1 style="font-size: 40px;">M E D I C A L &nbsp;&nbsp;C E R T I F I C A T E</h1>
 			</div><br>
 			<div class="col-md-12" style="padding-left: 20mm; padding-right: 20mm;">
 				<h3>TO WHOM IT MAY CONCERN:</h3>
-			</div><br><br>
+			</div><br>
 		</div>
-		<div class="col-md-12" style="padding-left: 24mm; padding-right: 20mm;">
-			<h4>This is to certify that {{$dates->patients->firstname}} {{$dates->patients->middlename}} {{$dates->patients->lastname}}, {{$dates->patients->age}} years old, {{$dates->patients->sex}}, {{$dates->patients->civilstatus}}, and a resident of {{$dates->patients->address}}, was <u>examined/treated</u> in this clinic on <u>{{$dates->date}}</u> with the following findings</h4>
+		<div class="col-xs-12" style="padding-left: 24mm; padding-right: 20mm;">
+			<h3>This is to certify that {{$dates->patients->firstname}} {{$dates->patients->middlename}} {{$dates->patients->lastname}}, {{$dates->patients->age}} years old, {{$dates->patients->sex}}, {{$dates->patients->civilstatus}}, and a resident of {{$dates->patients->address}}, was <u>examined/treated</u> in this clinic on <u>{{$dates->date}}</u> with the following findings</h3>
 		</div>
-		<div class="col-md-12" style="padding-left: 194mm; padding-right: 20mm; padding-top: 120mm;">
+		<div class="col-xs-12" style="padding-left: 24mm; padding-right: 20mm;">
+			<h3><strong>Impression</strong></h3>
+			@foreach($impressions as $assessment)
+				<h3>{!! $assessment !!}</h3>
+			@endforeach
+		</div>
+		<div class="col-xs-12" style="padding-left: 24mm; padding-right: 20mm;">
+			<h3><strong>Procedure</strong></h3>
+			@foreach($procedures as $procedure)
+				<h3>{!! $procedure !!}</h3>
+			@endforeach
+		</div>
+		<div class="col-xs-12" style="padding-left: 24mm; padding-right: 20mm;">
+			<h3><strong>Recommendation</strong></h3>
+			@foreach($recommendations as $recommendation)
+				<h3>{!! $recommendation !!}</h3>
+			@endforeach
+		</div>
+		<div class="col-md-12" id="sign" style="padding-left: 194mm; padding-right: 20mm; padding-top: 175mm;">
 			<h4>___________________________</h4>
 			<h4><strong>Jerimiah R. Morales, MD, FPOA</strong></h4>
 			<h4><strong>Lic. <u>No.</u> 103836</strong></h4>
@@ -48,7 +65,7 @@
 		</div>
 	</div>
 	<footer class="footer" style="padding-left: 20mm; padding-right: 20mm;">
-		<div class="col-md-12">
+		<div class="col-xs-12">
 			<div class="container" id="footer">
 				<h5>__________________________________________________________________________________________________________________</h5>
 				<h4>Clinical Address:</h4>

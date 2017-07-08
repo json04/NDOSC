@@ -836,6 +836,7 @@ class PrintController extends Controller
         $patients = Patient::findOrFail($dates->patients_id);
         $subjectives = Subjective::findOrFail($id);
         $objectives = Objective::findOrFail($id);
+        // $assessments = Assessment::findOrFail($id);
         $plans = Plan::findOrFail($id);
         
         $impression = collect([
@@ -877,7 +878,7 @@ class PrintController extends Controller
         // $pdf = PDF::loadView('print.medcert', compact('dates', 'impressions', 'dateconsultations', 'procedures', 'recommendations', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'))->setPaper('portrait')->setWarnings(false);
         // return $pdf->stream('Medical-Certificate-Request.pdf');
         // return PDF::loadFile('http://www.github.com')->inline('github.pdf');
-        return PDF::loadView('print.medcert', compact('dates', 'impressions', 'dateconsultations', 'procedures', 'recommendations', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'))->setPaper('a4')->setOrientation('portrait')->inline('medical.pdf');
+        return PDF::loadView('print.medcert', compact('dates', 'assessments', 'dateconsultations', 'procedures', 'recommendations', 'patients', 'subjectives', 'objectives', 'impressions', 'plans'))->setPaper('a4')->setOrientation('portrait')->inline('medical.pdf');
     }
 
     public function referralPrint(Request $request, $id){
