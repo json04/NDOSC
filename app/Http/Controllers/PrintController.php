@@ -143,10 +143,11 @@ class PrintController extends Controller
         $xrays = array_filter($toArray, function($data){
             return $data != null;
         });
-       	$pdf = PDF::loadView('print.xray', compact('xrays', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-       	// $pdf = PDF::loadFile(public_path(). '\Ultrasound-Request.pdf')->stream('Ultrasound-Request.pdf');
-        // dd($xrays);
-    	return $pdf->stream('Xray-Request.pdf');
+     //   	$pdf = PDF::loadView('print.xray', compact('xrays', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+     //   	// $pdf = PDF::loadFile(public_path(). '\Ultrasound-Request.pdf')->stream('Ultrasound-Request.pdf');
+     //    // dd($xrays);
+    	// return $pdf->stream('Xray-Request.pdf');
+        return PDF::loadView('print.xray', compact('dates', 'xrays', 'patients'))->setOption('page-width', '140')->setOption('page-height', '216')->setOption('margin-top', '0')->setOption('margin-right', '0')->setOption('margin-bottom', '0')->setOption('margin-left', '0')->setOption('footer-right', 'footer')->setOrientation('portrait')->inline('xray.pdf');
     }
 
     public function ultrasound(Request $request, $id){
@@ -193,8 +194,10 @@ class PrintController extends Controller
         $ultrasounds = array_filter($toArray, function($data){
             return $data != null;
         });
-       	$pdf = PDF::loadView('print.ultrasound', compact('dates', 'patients', 'ultrasounds', 'subjectives', 'objectives', 'assessments'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-    	return $pdf->stream('Ultrasound-Request.pdf');
+     //   	$pdf = PDF::loadView('print.ultrasound', compact('dates', 'patients', 'ultrasounds', 'subjectives', 'objectives', 'assessments'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+    	// return $pdf->stream('Ultrasound-Request.pdf');
+
+        return PDF::loadView('print.ultrasound', compact('dates', 'ultrasounds', 'patients', 'subjectives', 'objectives', 'assessments'))->setOption('page-width', '140')->setOption('page-height', '216')->setOption('margin-top', '0')->setOption('margin-right', '0')->setOption('margin-bottom', '0')->setOption('margin-left', '0')->setOption('footer-right', 'footer')->setOrientation('portrait')->inline('ultrasound.pdf');
     }
 
     public function laboratory(Request $request, $id){
@@ -234,8 +237,10 @@ class PrintController extends Controller
         $laboratories = array_filter($toArray, function($data){
             return $data != null;
         });
-        $pdf = PDF::loadView('print.laboratory', compact('laboratories', 'dates', 'patients'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Laboratory-Request.pdf');
+        // $pdf = PDF::loadView('print.laboratory', compact('laboratories', 'dates', 'patients'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        // return $pdf->stream('Laboratory-Request.pdf');
+
+        return PDF::loadView('print.laboratory', compact('dates', 'laboratories', 'patients'))->setOption('page-width', '140')->setOption('page-height', '216')->setOption('margin-top', '0')->setOption('margin-right', '0')->setOption('margin-bottom', '0')->setOption('margin-left', '0')->setOption('footer-right', 'footer')->setOrientation('portrait')->inline('laboratory.pdf');
     }
 
     public function mri(Request $request, $id){
@@ -291,8 +296,10 @@ class PrintController extends Controller
             return $data != null;
         });
 
-        $pdf = PDF::loadView('print.mri', compact('dates', 'creatinineResults', 'patients', 'mris', 'subjectives', 'objectives', 'assessments'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Mri-Request.pdf');
+        // $pdf = PDF::loadView('print.mri', compact('dates', 'creatinineResults', 'patients', 'mris', 'subjectives', 'objectives', 'assessments'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        // return $pdf->stream('Mri-Request.pdf');
+
+        return PDF::loadView('print.mri', compact('dates', 'creatinineResults', 'patients', 'mris', 'subjectives', 'objectives', 'assessments'))->setOption('page-width', '140')->setOption('page-height', '216')->setOption('margin-top', '0')->setOption('margin-right', '0')->setOption('margin-bottom', '0')->setOption('margin-left', '0')->setOption('footer-right', 'footer')->setOrientation('portrait')->inline('mri.pdf');
     }
 
     public function ct(Request $request, $id){
@@ -343,15 +350,16 @@ class PrintController extends Controller
         });
 
         $toArray = $result->toArray();
-        $mris = array_filter($toArray, function($data){
+        $cts = array_filter($toArray, function($data){
             return $data != null;
         });
 
-        $pdf = PDF::loadView('print.ct', compact('dates', 'creatinineResults', 'patients', 'mris', 'subjectives', 'objectives', 'assessments'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('CT-Request.pdf');
+        return PDF::loadView('print.ct', compact('dates', 'creatinineResults', 'patients', 'cts', 'subjectives', 'objectives', 'assessments'))->setOption('page-width', '140')->setOption('page-height', '216')->setOption('margin-top', '0')->setOption('margin-right', '0')->setOption('margin-bottom', '0')->setOption('margin-left', '0')->setOption('footer-right', 'footer')->setOrientation('portrait')->inline('ctscan.pdf');
     }
 
-    public function relaxant(Request $request, $id){
+    //merge
+
+    public function prescription(Request $request, $id){
         $dates = Date::findOrFail($id);
         $patients = Patient::findOrFail($dates->patients_id);
         $subjectives = Subjective::findOrFail($id);
@@ -437,24 +445,6 @@ class PrintController extends Controller
         $result_prednisolone10 = $request->input('prednisolone10');
         $prednisolone10 = explode('|', $result_prednisolone10);
 
-        $result = array($arcoxia120, $arcoxia90, $arcoxia60, $celebrex400, $celebrex200, $celcoxx400, $celcoxx200, $oxycodone10, $dolcet, $dolcetmini, $paratram, $mefenamic_acid250, $mefenamic_acid50, $mefenamic_acid50_2, $paracetamol_biogesic500, $paracetamol_tempra250, $paracetamol_tempra125, $lyrica75, $lyrica50, $gabix300, $gabix100, $norgesic_forte, $myonal, $baclofen10, $dexamethasone_decilone_Forte4, $prednisolone10, );
-
-
-        array_filter($result, function($v){return!empty($v);});
-        $array = array_map('array_filter', $result);
-        $relaxants = array_filter($array, function($x){ return!empty($x);});
-
-         $pdf = PDF::loadView('print.relaxant', compact('relaxants', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Relaxant_relaxant_request.pdf'); 
-    }
-
-    public function miscsupplement(Request $request, $id){
-        $dates = Date::findOrFail($id);
-        $patients = Patient::findOrFail($dates->patients_id);
-        $subjectives = Subjective::findOrFail($id);
-        $objectives = Objective::findOrFail($id);
-        $assessments = Assessment::findOrFail($id);
-
         // Misc Supplements
 
         $result_mecobalamine500 = $request->input('mecobalamine500');
@@ -505,27 +495,9 @@ class PrintController extends Controller
         $result_appebon_kid120 = $request->input('appebon_kid120');
         $appebon_kid120 = explode('|', $result_appebon_kid120);
 
-        $result = $arrayName = array($mecobalamine500, $diprospan, $fosavance6500, $reventa, $bonviva150, $polynerve1000, $meganerve1000, $mecobalamine_methycobal500_6, $mecobalamine_methycobal500_90, $immunpro, $caltrate, $calciumade, $appebon, $appetite_plus, $appetens, $appebon_kid120, );
         // end of Misc Supplements
 
-        array_filter($result, function($v){return!empty($v);});
-        $array = array_map('array_filter', $result);
-        $miscs = array_filter($array, function($x){ return!empty($x);});
-
-        $pdf = PDF::loadView('print.miscsupplement', compact('miscs', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Prescription_miscsupplements_request.pdf');
-
-    }
-
-    public function antimicrobial(Request $request, $id){
-       
-        $dates = Date::findOrFail($id);
-        $patients = Patient::findOrFail($dates->patients_id);
-        $subjectives = Subjective::findOrFail($id);
-        $objectives = Objective::findOrFail($id);
-        $assessments = Assessment::findOrFail($id);
-
-        // Antimicrobial Medications
+         // Antimicrobial Medications
 
         $result_zegen500 = $request->input('zegen500');
         $zegen500 = explode('|', $result_zegen500);
@@ -596,16 +568,59 @@ class PrintController extends Controller
         $result_refampicin200_tsp = $request->input('refampicin200_tsp');
         $refampicin200_tsp = explode('|', $result_refampicin200_tsp);
 
-        $result = $arrayName = array($zegen500, $unasyn625, $co_amoxiclav625, $cloxicillin500_28, $cloxicillin500_56, $cloxacillin250, $cloxacillin125, $cefuroxime_zegen250, $cefuroxime_zegen500, $cefuroxime250, $cefuroxime125, $levofloxacin750, $levofloxacin750_14, $fluconazole150, $levox500, $ciprobay1000, $myrin_p_forte120, $myrin_p_forte90, $myrin120, $marin90, $refampicin300, $refampicin200_tbsp, $refampicin200_tsp, );
         // end of Antimicrobial Medications
+
+        $result = array($arcoxia120, $arcoxia90, $arcoxia60, $celebrex400, $celebrex200, $celcoxx400, $celcoxx200, $oxycodone10, $dolcet, $dolcetmini, $paratram, $mefenamic_acid250, $mefenamic_acid50, $mefenamic_acid50_2, $paracetamol_biogesic500, $paracetamol_tempra250, $paracetamol_tempra125, $lyrica75, $lyrica50, $gabix300, $gabix100, $norgesic_forte, $myonal, $baclofen10, $dexamethasone_decilone_Forte4, $prednisolone10, $mecobalamine500, $diprospan, $fosavance6500, $reventa, $bonviva150, $polynerve1000, $meganerve1000, $mecobalamine_methycobal500_6, $mecobalamine_methycobal500_90, $immunpro, $caltrate, $calciumade, $appebon, $appetite_plus, $appetens, $appebon_kid120, $zegen500, $unasyn625, $co_amoxiclav625, $cloxicillin500_28, $cloxicillin500_56, $cloxacillin250, $cloxacillin125, $cefuroxime_zegen250, $cefuroxime_zegen500, $cefuroxime250, $cefuroxime125, $levofloxacin750, $levofloxacin750_14, $fluconazole150, $levox500, $ciprobay1000, $myrin_p_forte120, $myrin_p_forte90, $myrin120, $marin90, $refampicin300, $refampicin200_tbsp, $refampicin200_tsp, );
+
 
         array_filter($result, function($v){return!empty($v);});
         $array = array_map('array_filter', $result);
-        $antimicrobials = array_filter($array, function($x){ return!empty($x);});
+        $prescriptions = array_filter($array, function($x){ return!empty($x);});
 
-        $pdf = PDF::loadView('print.antimicrobials', compact('antimicrobials', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Prescription_antimicrobial_request.pdf');
+        //  $pdf = PDF::loadView('print.relaxant', compact('relaxants', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+        // return $pdf->stream('Relaxant_relaxant_request.pdf'); 
+
+        // dd($relaxants);        
+        return PDF::loadView('print.prescription', compact('dates', 'prescriptions', 'patients'))->setOption('page-width', '140')->setOption('page-height', '216')->setOption('margin-top', '0')->setOption('margin-right', '0')->setOption('margin-bottom', '0')->setOption('margin-left', '0')->setOption('footer-right', 'footer')->setOrientation('portrait')->inline('prescription.pdf');
     }
+
+    // public function miscsupplement(Request $request, $id){
+    //     $dates = Date::findOrFail($id);
+    //     $patients = Patient::findOrFail($dates->patients_id);
+    //     $subjectives = Subjective::findOrFail($id);
+    //     $objectives = Objective::findOrFail($id);
+    //     $assessments = Assessment::findOrFail($id);
+
+        
+
+    //     array_filter($result, function($v){return!empty($v);});
+    //     $array = array_map('array_filter', $result);
+    //     $miscs = array_filter($array, function($x){ return!empty($x);});
+
+    //     $pdf = PDF::loadView('print.miscsupplement', compact('miscs', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+    //     return $pdf->stream('Prescription_miscsupplements_request.pdf');
+
+    // }
+
+    // public function antimicrobial(Request $request, $id){
+       
+    //     $dates = Date::findOrFail($id);
+    //     $patients = Patient::findOrFail($dates->patients_id);
+    //     $subjectives = Subjective::findOrFail($id);
+    //     $objectives = Objective::findOrFail($id);
+    //     $assessments = Assessment::findOrFail($id);
+
+       
+
+    //     array_filter($result, function($v){return!empty($v);});
+    //     $array = array_map('array_filter', $result);
+    //     $antimicrobials = array_filter($array, function($x){ return!empty($x);});
+
+    //     $pdf = PDF::loadView('print.antimicrobials', compact('antimicrobials', 'patients', 'dates'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
+    //     return $pdf->stream('Prescription_antimicrobial_request.pdf');
+    // }
+
+    //end of merge
 
     public function injectable(Request $request, $id){
 
@@ -905,8 +920,11 @@ class PrintController extends Controller
             return $data != null;
         });
 
-        $pdf = PDF::loadView('print.referral', compact('dates', 'names', 'notes', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Referral-Request.pdf');
+
+        return PDF::loadView('print.referral', compact('dates', 'subjectives', 'objectives', 'assessments', 'plans', 'names', 'notes'))->setOption('page-width', '140')->setOption('page-height', '216')->setOption('margin-top', '0')->setOption('margin-right', '0')->setOption('margin-bottom', '0')->setOption('margin-left', '0')->setOption('footer-right', 'footer')->setOrientation('portrait')->inline('referral.pdf');
+
+        // $pdf = PDF::loadView('print.referral', compact('dates', 'names', 'notes', 'patients', 'subjectives', 'objectives', 'assessments', 'plans'))->setPaper(array(0,-47,290.5,400), 'portrait');
+        // return $pdf->inline('Referral-Request.pdf');
 
     }
 
@@ -949,9 +967,9 @@ class PrintController extends Controller
         $data6 = collect([
             'data6' => $request->Input('data6'),
         ]);
-        $data7 = collect([
-            'data7' => $request->Input('data7'),
-        ]);
+        // $data7 = collect([
+        //     'data7' => $request->Input('data7'),
+        // ]);
 
         $toArray = $data1->toArray();
         $data1Results = array_filter($toArray, function($data){
@@ -961,18 +979,18 @@ class PrintController extends Controller
         $data2Results = array_filter($toArray, function($data){
             return $data != null;
         });
-        // $toArray = $data3->toArray();
-        // $data3Results = array_filter($toArray, function($data){
-        //     return $data != null;
-        // });
+        $toArray = $data3->toArray();
+        $data3Results = array_filter($toArray, function($data){
+            return $data != null;
+        });
         $toArray = $data4->toArray();
         $data4Results = array_filter($toArray, function($data){
             return $data != null;
         });
-        // $toArray = $data5->toArray();
-        // $data5Results = array_filter($toArray, function($data){
-        //     return $data != null;
-        // });
+        $toArray = $data5->toArray();
+        $data5Results = array_filter($toArray, function($data){
+            return $data != null;
+        });
         $toArray = $data6->toArray();
         $data6Results = array_filter($toArray, function($data){
             return $data != null;
@@ -981,10 +999,7 @@ class PrintController extends Controller
         // $data7Results = array_filter($toArray, function($data){
         //     return $data != null;
         // });
-
-        $pdf = PDF::loadView('print.admission', compact('dates', 'names', 'patients', 'subjectives', 'objectives', 'assessments', 'plans', 'data1Results', 'data2Results', 'data3', 'data4Results', 'data5', 'data6Results', 'data7'))->setPaper(array(0,-47,290.5,400), 'portrait')->setWarnings(false);
-        return $pdf->stream('Admission-Request.pdf');
-
+        return PDF::loadView('print.admission', compact('dates', 'patients', 'subjectives', 'objectives', 'assessments', 'plans', 'data1Results', 'data2Results', 'data3Results', 'data4Results', 'data5Results', 'data6Results'))->setOption('page-width', '140')->setOption('page-height', '216')->setOption('margin-top', '0')->setOption('margin-right', '0')->setOption('margin-bottom', '0')->setOption('margin-left', '0')->setOption('footer-right', 'footer')->setOrientation('portrait')->inline('admission.pdf');
     }
 
 }

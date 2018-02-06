@@ -33,9 +33,9 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/admissionView/{id}', 'PrintController@admissionView');
 	Route::post('/admissionPrint/{id}', 'PrintController@admissionPrint');
 	Route::get('/medcertview/{id}', 'PrintController@medcertview');
-	Route::post('/relaxant/{id}', 'PrintController@relaxant');
-	Route::post('/antimicrobials/{id}', 'PrintController@antimicrobial');
-	Route::post('/miscsupplement/{id}', 'PrintController@miscsupplement');
+	Route::post('/prescription/{id}', 'PrintController@prescription');
+	// Route::post('/antimicrobials/{id}', 'PrintController@antimicrobial');
+	// Route::post('/miscsupplement/{id}', 'PrintController@miscsupplement');
 	Route::post('/injectables/{id}', 'PrintController@injectable');
 	Route::post('/dressing/{id}', 'PrintController@dressing');
 	Route::post('/castingmaterials/{id}', 'PrintController@castingMaterials');

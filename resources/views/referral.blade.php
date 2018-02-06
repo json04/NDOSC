@@ -26,11 +26,6 @@
 									<p style="margin-bottom: 0px;">PLAN:</p>
 									{!!$plans->plan!!}</<br>
 									<p>NOTE: &nbsp<input class="form-input" type="text" name="note" size="20"></p><br><br>
-									<p>Thank you!</p><br><br>
-									<p style="margin-bottom: 0px;">________________________</p>
-									<p style="margin-bottom: 0px;"> <strong>Jeremiah R. Morales, MD, FPOA</strong></p>
-									<p style="margin-bottom: 0px;">License No. 103836</p>
-									<p>Orthopaedic-Spine Surgery</p>
 									<div class="col-md-12" align="center">
 										<button class="btn btn-default btn-md">PRINT</button>
 									</div>

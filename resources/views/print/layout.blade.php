@@ -150,14 +150,6 @@
 		</div>
 		<div class="col-xs-12">
 			<!-- Content -->
-			<br>
-			<h5 align="center"><strong>XRAY REQUEST</strong></h5>
-			<br>
-			@foreach($xrays as $data)
-			<ul style="margin: 0;">
-				<li>{{$data}}</li>
-			</ul>
-			@endforeach
 		</div>
 		<!-- Signature and Footer -->
 		<div class="sticky-footer" style="bottom: 0; position: absolute; padding-left: 8px;">

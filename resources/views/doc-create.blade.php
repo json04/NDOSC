@@ -112,7 +112,7 @@
 						<div class="card card-signup" align="center">
 							<div class="content">
 								<h5 align="left" class="title">Consultation Date</h5>
-								<input class="form-control datepicker" type="text" name="date" required/>
+								<input class="form-control" type="date" name="date" required/>
 							</div>
 						</div>
 					</div>
@@ -192,6 +192,7 @@
 			            x++; //text box increment
 			            $(wrapper).append('<div class="fileinput fileinput-new text-center" data-provides="fileinput"><div class="fileinput-new thumbnail img-raised" style="max-width:400px; max-height:250px;"><img src="../img/image_placeholder.jpg" alt="..."></div><div class="fileinput-preview fileinput-exists thumbnail img-raised" style="max-width:400px; max-height:250px;"></div><div><span class="btn btn-round btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="images[]" multiple></span></div><a href="#" class="btn btn-round btn-default" id="remove_field">Remove</a></div>&nbsp&nbsp&nbsp&nbsp'); //add input box
 			        }
+			        console.log('test');	
 			    });
 			    
 			    $(wrapper).on("click","#remove_field", function(e){ //user click on remove text
@@ -199,6 +200,13 @@
 			    })
 			});
 	</script>
+
+	{{-- <script type="text/javascript">
+		$("#add_field_button").ready(function(){
+			console.log('test');
+		});
+	</script> --}}
+
 	<script type="text/javascript">
 		$("subjectiveText").ready(function(){
 			var convert = this.val;
